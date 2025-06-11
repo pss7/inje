@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+#wrap{height: 100vh;}
+#main,
+.container,
+.infoWrap,
+.infoBox{height: 100%;}
+
+/* 메인 */
+#main{position: relative;}
+#main .img06{ width: 25px; height: 24px; position: absolute; top:179px; right: 135px; background: url(../images/main/img05.svg)no-repeat center; background-size: contain; /*animation: drop 3s ease-in infinite; */ animation: ripple 2.5s 1.8s ease-in-out infinite alternate;}
+
+/*
+@keyframes drop {
+  0% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  100% {
+    top: 300px;
+    opacity: 0;
+    transform: scale(0.7);
+  }
+}
+*/
+
+#main .img07{width: 186px; height: 167px; position: absolute; top:142px; right: -50px; background: url(../images/main/img06.svg)no-repeat center; background-size: contain;  animation: diagonalSwing 1.5s 1.8s ease-in-out infinite alternate;}
+
+@keyframes diagonalSwing {
+
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+
+}
+#main .infoWrap{position: relative; padding: 86px 0 0;}
+#main .img05{width: 147px; height: 216px; position: absolute; top:323px; left:0; background: url(../images/main/img03.svg)no-repeat center; z-index: -1; background-size: contain; animation: ripple  5s 1.8s ease-in-out infinite alternate;}
+#main .img04{ width: 47px; height: 46px; position: absolute; top:300px; left:146px; background: url(../images/main/img04.svg)no-repeat center; background-size: contain; animation: ripple  2.5s 1.8s ease-in-out infinite alternate;}
+#main .infoWrap .infoBox{position: relative; z-index: 1;}
+#main .img03{width: 559px; height: 558px; position: absolute; top:48px; right:0; background: url(../images/main/main.svg)no-repeat center; z-index: -1; background-size: contain;   animation: glow 2.5s ease-in-out infinite alternate;}
+
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 0px rgba(17, 156, 155, 0.3));
+    transform: scale(1);
+  }
+  100% {
+    filter: drop-shadow(0 0 8px rgba(17, 156, 155, 0.8));
+     transform: scale(1.03);
+  }
+}
+
+#main .infoWrap .infoBox .img01{width: 45px; height: 44px; position: absolute; bottom: -100px; right: 502px; background: url(../images/main/img02.svg)no-repeat center; z-index: -1; background-size: contain; transition: all 1.5s;}
+#main .infoWrap .infoBox .img02{width: 409px; height: 99px; position: absolute; bottom: -100px; right: 411px; background: url(../images/main/img01.svg)no-repeat center; opacity: .5; z-index: -1; background-size: contain; transition: all 1.5s; /*animation: fadeIn 3s ease-in-out infinite alternate; */}
+
+/* @keyframes fadeIn {
+  0% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1; 
+  }
+} */
+
+#main .infoWrap .infoBox .img01.active{bottom: 62px;}
+#main .infoWrap .infoBox .img02.active{bottom: 0;}
+#main .infoWrap h2{font-size: 58px; color: #292929; font-weight: 800; line-height: 1.4;}
+#main .infoWrap h2 span{display: block;}
+#main .infoWrap h2 p{margin-top: 20px;  font-size: 22px; color: #292929; font-weight: 500;}
+#main .infoWrap .titleBox{margin-bottom: 50px;}
+#main .infoWrap .linkList{display: flex; gap: 0 30px;}
+#main .infoWrap .linkList li{ display: flex; flex-direction: column; width: 250px; height: 287px; border: 1px solid #c8e6e6; border-radius: 15px; background-color: #fff;}
+#main .infoWrap .linkList li .infoText{padding: 32px 0 0;}
+#main .infoWrap .linkList li .infoText h3{font-size: 24px; color: #292929; font-weight: 600; text-align: center;} 
+#main .infoWrap .linkList li .infoText h3{display: flex; flex-direction: column; align-items: center; gap: 0 0;}
+#main .infoWrap .linkList li .infoText h3::after{content: '';}
+#main .infoWrap .linkList li:nth-child(1) .infoText h3{gap: 15px 0;}
+#main .infoWrap .linkList li:nth-child(1) .infoText h3:after{width: 124px; height: 112px; background: url(../images/main/link_img01.svg)no-repeat center; background-size: contain;}
+#main .infoWrap .linkList li:nth-child(2) .infoText h3{gap: 12px 0;}
+#main .infoWrap .linkList li:nth-child(2) .infoText h3:after{width: 93px; height: 119px; background: url(../images/main/link_img02.svg)no-repeat center; background-size: contain;}
+#main .infoWrap .linkList li .linkBox{margin-top: auto; display: flex; border-top: 1px solid #c8e6e6;}
+#main .infoWrap .linkList li .linkBox a{position: relative; padding: 18px 0; display: block; width: 50%; border-right: 1px solid #c8e6e6; transition: all .5s;}
+#main .infoWrap .linkList li .linkBox a:hover{background-color: #0FC1BF;}
+#main .infoWrap .linkList li .linkBox a:last-child{border: 0;}
+#main .infoWrap .linkList li .linkBox a span{position: relative; display: flex; justify-content: center; align-items: center; gap: 0 15px; font-size: 18px; text-align: center; font-weight: 500;}
+#main .infoWrap .linkList li .linkBox a span::after{width: 8px; height: 14px; content: ''; background: url(../images/main/arrow_icon02.svg)no-repeat center;}
+#main .infoWrap .linkList li .linkBox a:hover span::after{content: ''; width: 8px; height: 14px; background: url(../images/main/arrow_icon03.svg)no-repeat center;}
+#main .infoWrap .linkList li .linkBox a:hover span{color: #fff;}
+#main .infoWrap .linkList li .linkBox a::before{content: ''; position: absolute; top:0; left:0; right:0; bottom: 0; width: 0; background-color: #0FC1BF;}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 1199px){
+
+  #main .infoWrap h2{font-size: 40px;}
+  #main .infoWrap h2 p{font-size: 20px;}
+
+  #main .infoWrap .linkList li .infoText h3{font-size: 22px;}
+  #main .img03{width: 412px; height: 417px;}
+  #main .img06{top: 100px;}
+  #main .img07{top: 82px}
+  #main .infoWrap .infoBox .img02{width: 320px; height: 78px;}
+  #main .infoWrap .infoBox .img01.active{bottom: 52px;}
+  #main .img05{top:0;}
+  #main .img04{top: 235px; left: 130px;} 
+
+}
+
+@media (max-width: 767px){
+
+  #main .img05{width: 74px; height: 110px;}
+  #main .img04{top:114px; left: 68px; width: 25px; height: 25px;}
+  #main .infoWrap .titleBox{margin-bottom: 40px;}
+  #main .infoWrap h2{font-size: 30px;}
+  #main .infoWrap .linkList li{background: rgba(255,255,255,.5);}
+  #main .infoWrap .linkList li .infoText h3{font-size: 20px;}
+  #main .infoWrap h2 p{font-size: 18px;}
+  #main .infoWrap .linkList{gap: 0 20px;}
+  #main .infoWrap .linkList li{width: 220px; height: 250px;}
+  #main .infoWrap .linkList li:nth-child(1) .infoText h3:after{width: 93px; height: 83px;}
+  #main .infoWrap .linkList li:nth-child(2) .infoText h3:after{width: 77px; height: 98px;}
+  #main .infoWrap .linkList li .linkBox a{padding: 12px 0;}
+  #main .infoWrap .linkList li .linkBox a span{gap: 0 13px; font-size: 14px;}
+  #main .img03{right:0; top: auto; bottom: 24px; width: 350px; height: 350px;}
+  #main .infoWrap .infoBox .img02{ left:0; right: auto; width: 230px; height: 57px;}
+  #main .infoWrap .infoBox .img01{ width: 35px; height: 35px; right: auto; left: 148px;}
+  #main .infoWrap .infoBox .img01.active{bottom: 33px;}
+
+}
+
+@media (max-width: 576px){
+
+  #main .infoWrap .infoBox .img02{width: 148px; height: 37px;}
+  #main .infoWrap .infoBox .img01{width: 25px; height: 25px; left: 86px;}
+  #main .infoWrap .infoBox .img01.active{bottom: 22px;}
+  #main .img03{width: 266px; height: 266px; bottom: 42px;}
+  #main .img07{width: 89px; height: 126px; right: -24px;}
+  #main .img06{top: 110px; right: 74px; width: 15px; height: 15px;}
+  
+}
+
+@media (max-width: 480px){
+
+  #main .infoWrap{padding: 65px 0 0;}
+  #main .infoWrap .titleBox{margin-bottom: 32px;}
+  #main .infoWrap h2{font-size: 22px;}
+  #main .infoWrap h2 p{margin-top: 15px; font-size: 15px;}
+  #main .infoWrap .linkList li{border-radius: 10px;}
+  #main .infoWrap .linkList li .infoText h3{font-size: 18px;}
+  #main .img07{top: 62px;}
+  #main .img06{top: 94px; right: 69px;}
+
+}
+
+@media (max-width: 414px){
+
+  #main .img03{width: 200px; height: 200px; bottom: 55px;}
+  #main .infoWrap .infoBox .img01{width: 20px; height: 20px;}
+  #main .infoWrap .linkList{gap: 0 10px;}
+  #main .infoWrap .linkList li .infoText{padding: 28px 0 0;}
+  #main .infoWrap .linkList li{height: 233px;}
+
+}
+
+@media (max-width: 375px){
+
+  #main .infoWrap .linkList li .infoText{padding: 16px 0;}
+  #main .infoWrap .linkList li:nth-child(1) .infoText h3{gap: 5px 0;}
+  #main .infoWrap .linkList li .infoText h3{font-size: 16px;}
+  #main .infoWrap .linkList{flex-direction: column; gap: 10px 0;}
+  #main .infoWrap .linkList li{width: 100%; height: auto;}
+  #main .infoWrap .linkList li:nth-child(1) .infoText h3:after{width: 73px; height: 63px;}
+  #main .infoWrap .linkList li .linkBox a{padding: 6px 0;}
+
+}
