@@ -1,17 +1,52 @@
 @charset "UTF-8";
 
-/* 공통 */
-
-
-
-
-
-
 /* 가운데영역 */
 .container{max-width: 1020px; margin: 0 auto;}
 
-.contentWrap{padding: 70px 0; background-color: #f9f9f9;}
-.contentBox{padding: 90px 180px; background-color: rgba(255,255,255, .7); border-radius: 15px;}
+/* 공통 */
+#wrap,
+#sub,
+.contentWrap{height: 100%;}
+
+#sub{position: relative;}
+.mb-10{margin-bottom: 10px!important;}
+.mb-20{margin-bottom: 20px!important;}
+.mt-10{margin-top: 10px!important;}
+.text-center{text-align: center!important;}
+/* #sub .img{position: absolute;}
+#sub .img01{top: -30px; left: 300px;}
+#sub .img02{top: 218px; left: 208px;}
+#sub .img03{top: 351px; right: 0;}
+#sub .img04{top: 1051px; left: 0;}
+#sub .img05{top: 1148px; left: 288px;} */
+
+.inpuTextBox{position: relative;}
+.inpuTextBox input{width: 100%; padding:0 10px 0 12px; height: 45px; border: 1px solid #ccc; font-size: 14px; font-weight: 500; color: #000; border-radius: 5px;}
+.inpuTextBox input::placeholder{color: #B5B5B5; font-weight: 400;}
+.inpuRadioWrap{margin-top: 10px; display: flex; align-items: center; gap: 0 25px;}
+.inpuRadioBox label{position: relative; display: flex; align-items: center; gap: 0 8px; font-size: 13px; font-weight: 500;color: #000; cursor: pointer;}
+.inpuRadioBox label::before{content: ''; width: 18px; height: 18px; border-radius: 50px; border: 1px solid #ccc;}
+.inpuRadioBox input:checked + label::before{border: 1px solid #000;}
+.inpuRadioBox input:checked + label::after{content: ''; position: absolute; top:5px; left:5px; width: 10px; height: 10px; border-radius: 50px; background-color: #000;}
+.selectBox{position: relative;}
+.selectBox .selectBtn{position: relative; display: block; width: 100%; padding-left: 12px; height: 45px; border: 1px solid #ccc; font-size: 14px; color: #000; border-radius: 5px; text-align: left; color: #B5B5B5; background-color: #fff;}
+.selectBox .selectBtn::after{content: ''; width: 10px; height: 6px; position: absolute; top: 50%; transform: translateY(-50%); right:13px; background: url(../images/sub/arrow_icon01.svg)no-repeat center; transition: all .5s;}
+.selectBox .selectBtn.active::after{transform: rotate(-180deg);}
+.selectBox .selectList{display: none; padding: 10px 0; position: absolute; top:52px; left:0; right: 0; border: 1px solid #ccc; background-color: #fff; border-radius: 10px; box-shadow: 10px 10px 10px rgba(0,0,0,.1);}
+.selectBox .selectList li a{padding: 10px 5px 10px 12px; display: block; font-size: 14px; font-weight: 500; color: #000; transition: all .5s;}
+.selectBox .selectList li a:hover{background: #ddd;}
+.ui-datepicker-trigger{position: absolute; top:50%; right:15px; transform: translateY(-50%);}
+.inputCheckBox label{position: relative; padding-left: 26px; font-size: 14px; font-weight: 500; cursor: pointer;}
+.inputCheckBox label::before{content: ''; position: absolute; left:0; top:-1px; width: 16px; height: 16px; border: 1px solid #ccc; border-radius: 50px;}
+.inputCheckBox input:checked + label::before{border: 0; background: #0FC1BF url(../images/sub/chk_icon.svg)no-repeat center 5px;}
+.fileBox{padding: 18px 20px; width: 100%; display: flex; align-items: center; justify-content: space-between; border: 1px solid #ccc; border-radius: 5px;} 
+.fileBox .titleBox{margin: 0!important;}
+.fileBox .fileLabel{ padding-left: 10px; display: flex; justify-self: flex-end; align-items: center; gap: 0 7px; width: 58px; height: 26px; line-height: 26px; border: 1px solid #A7B0E9; border-radius: 5px; background-color: #F9FBFF; font-size: 12px; color: #000; font-weight: 500; cursor: pointer;}
+.fileBox .fileLabel::before{content: ''; width: 12px; height: 11px; background: url(../images/sub/plus_icon.svg)no-repeat center;}
+.fileBox .fileName{display: block; margin-top: 5px; font-size: 14px; color: #000; font-weight: 500;}
+.requiredInput{color: #E82626;}
+.contentWrap{position: relative; padding: 70px 0; overflow: hidden; background:#f9f9f9 url(../images/sub/bg.svg)no-repeat center -60px; background-size: cover;}
+.contentBox{position: relative; padding: 90px 180px; background-color: rgba(255,255,255, .7); border-radius: 15px; z-index: 1;}
 .titleBox {margin-bottom: 60px;}
 .titleBox .title{margin-bottom: 26px; font-size: 42px; font-weight: 700; color: #000; line-height: 1.4;}
 .titleBox .subText01{display: block; margin-bottom: 3px; font-weight: 700; color: #000;}
@@ -19,7 +54,91 @@
 .infoInputbox h4{margin-bottom: 20px;}
 .infoInputbox h4 span{margin-top: -2px; width: 20px; height: 20px; font-weight: 700; color: #fff; background-color: #0FC1BF; border-radius: 50px; text-align: center; font-size: 14px;}
 .infoInputbox h4{padding-bottom: 8px; display: flex; align-items: center; gap: 0 5px; border-bottom: 1px solid #000; font-size: 19px; color: #000; font-weight: 700;}
+.infoInputbox .formBox{margin-bottom: 60px; display: flex; flex-wrap: wrap; gap: 20px;}
+.infoInputbox .formBox .box{width: 48%;}
+.infoInputbox .formBox .tit{display: block; margin-bottom: 7px; font-size: 14px; color: #000; font-weight: 600;}
+.infoInputbox .formBox .fileBox{margin-bottom: -10px;}
+.infoInputbox .formBox  .subText{margin-bottom: 5px; font-size: 14px; color: #000; font-weight: 600;}
+.btnBox .btn{display: block; width: 337px; height: 54px; line-height: 54px; margin: 100px auto 0; border-radius: 10px; background-color: #0FC1BF; color: #fff; text-align: center; font-size: 18px; font-weight: 600;}
 
-.infoInputbox .formBox .tit{display: block; font-size: 14px; color: #000; font-weight: 600;}
-.infoInputbox .formBox .tit em{ color: #E82626;}
+/* 기숙사신청 */
+.dormitoryApplicationBox .titleBox{margin-bottom: 25px;}
+.dormitoryApplicationBox .titleBox .title{margin-bottom: 0;}
+.dormitoryApplicationBox .selectWrap{margin-bottom: 60px; padding: 26px; background-color: #F0F8F8; border-radius: 7px;}
+.dormitoryApplicationBox .selectWrap h4{margin-bottom: 17px; text-align: center; font-weight: 700; color: #000;}
+.dormitoryApplicationBox .selectWrap .formBox{display: flex; flex-wrap: wrap; gap: 10px 5px;}
+.dormitoryApplicationBox .selectWrap .formBox .selectBox{width: 49.5%;}
 
+@media (max-width: 1199px){
+
+  .contentBox{padding: 90px;}
+
+}
+
+@media (max-width: 1024px){
+
+  .contentBox{padding: 50px;}
+  .titleBox{margin-bottom: 50px;}
+  .titleBox .title{margin-bottom: 16px; font-size: 30px;}
+
+}
+
+@media (max-width: 767px){
+
+  .contentWrap{background-size: contain;}
+  .contentBox{padding: 50px 20px;}
+  .titleBox{margin-bottom: 40px;}
+  .titleBox .title{font-size: 26px;}
+  .infoInputbox .formBox .box{width: 100%;}
+
+  .btnBox .btn{width: 100%; height: 45px; line-height: 45px; font-size: 16px; border-radius: 5px;}
+  .inpuRadioWrap{flex-direction: column; gap: 15px 0; align-items: flex-start;} 
+  .fileBox{flex-direction: column; gap: 10px 0; align-items:flex-start;}
+
+  .dormitoryApplicationBox .selectWrap{margin-bottom: 35px; padding: 26px 20px;}
+  .dormitoryApplicationBox .selectWrap .formBox .selectBox{width: 100%;}
+
+  .selectBox .selectBtn,
+  .inpuTextBox input{height: 40px;}
+
+}
+
+@media (max-width: 480px){
+
+  .contentWrap{padding: 50px 0;}
+  .contentBox{padding: 34px 20px;}
+  .titleBox .title{font-size: 23px;}
+
+}
+
+/* 조회 */
+.tabContentBox{min-height: 150px;}
+.tab{width: 320px; margin: 0 auto 40px; display: flex; justify-content: center; align-items: center; gap: 0 5px; padding: 5px; background-color: #F6F6F6;}
+.tab li{width: 100%;}
+.tab li .tabBtn{display: block; width: 100%; height: 34px; border-radius: 7px; background-color: #fff; color: #B5B5B5; font-weight: 500; font-size: 13px;}
+.tab li .tabBtn.active{background-color: #343434; color: #fff;}
+.viewListBox h4{padding-bottom: 5px; color: #000; font-weight: 700; border-bottom: 1px solid #000;}
+.viewListBox .viewList > li{padding: 22px 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #000;}
+.viewListBox .viewList li .textBox h5{margin-bottom: 10px; color: #000; font-size: 18px; font-weight: 600;}
+.viewListBox .viewList li .textBox .list li{line-height: 1.3;}
+.viewListBox .viewList li .textBox .list li span,
+.viewListBox .viewList li .textBox .list li em{font-size: 14px; color: #333;}
+.viewListBox .viewList li .stateBox .state01{margin-bottom: 10px; display: block; font-size: 18px; font-weight: 600; color: #000;}
+.viewListBox .viewList li .stateBox .state02{display: block; width: 49px; height: 24px; line-height: 24px; border-radius: 5px; text-align: center; background-color: #FFF3F3; color: #AD6767; font-size: 12px; font-weight: 500;} 
+.table{width: 100%;}
+.table thead tr th{padding: 12px 10px; height: 43px;  border-bottom: 1px solid #e4e4e4; font-size: 14px; color: #000; text-align: center; font-weight: 400;}
+.table tbody tr td{padding: 12px 10px; height: 43px; font-size: 14px; font-weight: 500; color: #000; text-align: center;}
+
+@media (max-width: 767px){
+
+  .viewListBox .viewList > li{flex-direction: column; gap: 40px 0; text-align: center;}
+  .viewListBox .viewList li .stateBox .state02{margin: 0 auto;}
+
+}
+
+@media (max-width: 480px){
+
+  .tableBox{overflow-x: auto;}
+  .tableBox .table{width: 480px;}
+
+}

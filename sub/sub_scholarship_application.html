@@ -8,14 +8,16 @@
     <meta name="Author" content="" />
     <meta name="viewport"
         content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
-    <title>기숙사신청</title>
+    <title>장학생신청</title>
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/sub.css">
     <link rel="stylesheet" href="../css/aos.css">
     <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
     <script src="../js/slick.min.js"></script>
     <script src="../js/aos.js"></script>
     <script src="../js/sub.js"></script>
@@ -30,7 +32,7 @@
         <header id="headerWrap">
             <div class="logoBox">
                 <h1>
-                    <a href="#">
+               <a href="../index.html">
                         <img src="../images/common/logo.svg" alt="인제군">
                     </a>
                 </h1>
@@ -48,56 +50,599 @@
                 <div class="container">
                     <div class="contentBox">
 
-                        <div class="titleBox">
-                            <h3 class="title">
-                                신규 장학금 신청서 작성
-                            </h3>
+                        <div class="scholarshipApplicationBox">
+                            <div class="titleBox">
+                                <h3 class="title">
+                                    신규 장학금 신청서 작성
+                                </h3>
 
-                            <span class="subText01">
-                                장학금 신청서 작성
-                            </span>
+                                <span class="subText01">
+                                    장학금 신청서 작성
+                                </span>
 
-                            <span class="subText02">
-                                아래 정보를 정학하게 입력해주세요.
-                            </span>
-                        </div>
-
-                        <div class="infoInputbox">
-                            <h4>
-                                <span>1</span>
-                                학생정보
-                            </h4>
-
-                            <div class="formBox">
-
-                                <div class="box">
-                                    <span class="tit">
-                                        이름
-                                        <em title="필수입력">
-                                            *
-                                        </em>
-                                    </span>
-                                    <div class="inpuTextBox">
-                                        <label for="name" class="blind">이름입력</label>
-                                        <input id="name" type="text" placeholder="이름을 입력하세요.">
-                                    </div>
-                                </div>
-
+                                <span class="subText02">
+                                    아래 정보를 정확하게 입력해주세요.
+                                </span>
                             </div>
 
+                            <div class="infoInputbox">
+                                <h4>
+                                    <span>1</span>
+                                    학생정보
+                                </h4>
 
+                                <div class="formBox">
+
+                                    <div class="box">
+                                        <span class="tit">
+                                            이름
+                                            <em title="필수입력" class="requiredInput">
+                                                *
+                                            </em>
+                                        </span>
+                                        <div class="inpuTextBox">
+                                            <label for="name" class="blind">이름입력</label>
+                                            <input id="name" type="text" placeholder="이름을 입력하세요.">
+                                        </div>
+                                    </div>
+
+                                    <div class="box">
+                                        <span class="tit">
+                                            생년월일
+                                            <em title="필수입력" class="requiredInput">
+                                                *
+                                            </em>
+                                        </span>
+                                        <div class="inpuTextBox">
+                                            <label for="calendar01" class="blind">생년월일</label>
+                                            <input class="calendar" id="calendar01" type="text" value="2025-01-01">
+                                        </div>
+                                    </div>
+
+                                    <div class="box">
+                                        <span class="tit">
+                                            성별
+                                        </span>
+                                        <div class="inpuRadioWrap">
+                                            <div class="inpuRadioBox">
+                                                <input name="gender" id="gender01" type="radio" class="blind" checked>
+                                                <label for="gender01">남</label>
+                                            </div>
+                                            <div class="inpuRadioBox">
+                                                <input name="gender" id="gender02" type="radio" class="blind">
+                                                <label for="gender02">여</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="box">
+                                        <span class="tit">
+                                            학번
+                                        </span>
+                                        <div class="inpuTextBox">
+                                            <label for="studentnumber" class="blind">학번</label>
+                                            <input id="studentnumber" type="text" placeholder="학번을 입력하세요.">
+                                        </div>
+                                    </div>
+
+                                    <div class="box">
+                                        <span class="tit">
+                                            학교명
+                                            <em title="필수입력" class="requiredInput">
+                                                *
+                                            </em>
+                                        </span>
+                                        <div class="inpuTextBox">
+                                            <label for="schoolname" class="blind">학교명</label>
+                                            <input id="schoolname" type="text" placeholder="학교명을 입력하세요.">
+                                        </div>
+                                    </div>
+
+                                    <div class="box">
+                                        <span class="tit">
+                                            학년(2025년 기준)
+                                            <em title="필수입력" class="requiredInput">
+                                                *
+                                            </em>
+                                        </span>
+                                        <div class="inpuTextBox">
+                                            <label for="grade" class="blind">학년</label>
+                                            <input id="grade" type="text" placeholder="학년을 입력하세요.">
+                                        </div>
+                                    </div>
+
+                                    <div class="box">
+                                        <span class="tit">
+                                            재학여부
+                                        </span>
+                                        <div class="selectBox">
+                                            <button class="selectBtn">
+                                                재학 상태 선택
+                                            </button>
+                                            <ul class="selectList">
+                                                <li>
+                                                    <a href="#">
+                                                        재학
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        휴학
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="box">
+                                        <span class="tit">
+                                            학과(학부, 계열)
+                                        </span>
+                                        <div class="inpuTextBox">
+                                            <label for="lesson" class="blind">학과</label>
+                                            <input id="lesson" type="text" placeholder="학과을 입력하세요.">
+                                        </div>
+                                    </div>
+
+                                    <div class="box">
+                                        <span class="tit">
+                                            주소
+                                        </span>
+                                        <div class="inpuTextBox">
+                                            <label for="address" class="blind">주소</label>
+                                            <input id="address" type="text" placeholder="주소를 입력하세요.">
+                                        </div>
+                                    </div>
+
+                                    <div class="box">
+                                        <span class="tit">
+                                            연락처(학생)
+                                        </span>
+                                        <div class="inpuTextBox">
+                                            <label for="phone" class="blind">연락처</label>
+                                            <input id="phone" type="text" placeholder="010-1234-5678">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //formBox -->
+
+                                <h4>
+                                    <span>2</span>
+                                    친권자 정보
+                                </h4>
+                                <div class="formBox">
+
+                                    <div class="box">
+                                        <span class="tit">
+                                            친권자 성명
+                                        </span>
+                                        <div class="inpuTextBox">
+                                            <label for="name02" class="blind">친권자 성명</label>
+                                            <input id="name02" type="text" placeholder="이름을 입력하세요.">
+                                        </div>
+                                    </div>
+
+                                    <div class="box">
+                                        <span class="tit">
+                                            지원자와의 관계
+                                        </span>
+                                        <div class="inpuTextBox">
+                                            <label for="relationship" class="blind">지원자와의 관계</label>
+                                            <input id="relationship" type="text" placeholder="">
+                                        </div>
+                                    </div>
+
+                                    <div class="box">
+                                        <span class="tit">
+                                            친권자 전화
+                                        </span>
+                                        <div class="inpuTextBox">
+                                            <label for="phone02" class="blind">친권자 전화</label>
+                                            <input id="phone02" type="text" placeholder="010-1234-5678">
+                                        </div>
+                                    </div>
+
+                                    <div class="box">
+                                        <span class="tit">
+                                            친권자 주소
+                                        </span>
+                                        <div class="inpuTextBox">
+                                            <label for="address02" class="blind"> 친권자 주소</label>
+                                            <input id="address02" type="text" placeholder="010-1234-5678">
+                                        </div>
+                                        <div class="inputCheckBox mt-10">
+                                            <input id="chk" type="checkbox" class="blind">
+                                            <label for="chk">학생 주소와 동일</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="box">
+                                        <span class="tit">
+                                            수급권자 여부
+                                        </span>
+                                        <div class="inpuRadioWrap">
+                                            <div class="inpuRadioBox">
+                                                <input name="radio" id="radio01" type="radio" class="blind" checked>
+                                                <label for="radio01">신청자본인</label>
+                                            </div>
+                                            <div class="inpuRadioBox">
+                                                <input name="radio" id="radio02" type="radio" class="blind">
+                                                <label for="radio02">친권자</label>
+                                            </div>
+                                            <div class="inpuRadioBox">
+                                                <input name="radio" id="radio03" type="radio" class="blind">
+                                                <label for="radio03">해당없음</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- //formBox -->
+
+                                <h4>
+                                    <span>3</span>
+                                    계좌 정보
+                                </h4>
+                                <div class="formBox">
+
+                                    <div class="box">
+                                        <span class="tit">
+                                            은행명
+                                        </span>
+                                        <div class="inpuTextBox">
+                                            <label for="name03" class="blind">은행명</label>
+                                            <input id="name03" type="text">
+                                        </div>
+                                    </div>
+
+                                    <div class="box">
+                                        <span class="tit">
+                                            계좌번호
+                                        </span>
+                                        <div class="inpuTextBox">
+                                            <label for="number" class="blind">계좌번호</label>
+                                            <input id="number" type="text">
+                                        </div>
+                                    </div>
+
+                                    <div class="box">
+                                        <span class="tit">
+                                            예금주
+                                        </span>
+                                        <div class="inpuTextBox">
+                                            <label for="name04" class="blind">예금주</label>
+                                            <input id="name04" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //formBox -->
+
+                                <h4>
+                                    <span>4</span>
+                                    신청정보
+                                </h4>
+                                <div class="formBox">
+
+                                    <div class="box">
+                                        <span class="tit">
+                                            신청년도
+                                            <em title="필수입력" class="requiredInput">
+                                                *
+                                            </em>
+                                        </span>
+                                        <div class="selectBox">
+                                            <button class="selectBtn">
+                                                2025
+                                            </button>
+                                            <ul class="selectList">
+                                                <li>
+                                                    <a href="#">
+                                                        선택
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        선택
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="box">
+                                        <span class="tit">
+                                            장학금 종류
+                                            <em title="필수입력" class="requiredInput">
+                                                *
+                                            </em>
+                                        </span>
+                                        <div class="selectBox">
+                                            <button class="selectBtn">
+                                                대학생
+                                            </button>
+                                            <ul class="selectList">
+                                                <li>
+                                                    <a href="#">
+                                                        선택
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        선택
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="box">
+                                        <span class="tit">
+                                            신청일
+                                        </span>
+                                        <div class="inpuTextBox">
+                                            <label for="calendar02" class="blind">신청일</label>
+                                            <input class="calendar" id="calendar02" type="text" value="2025-01-01">
+                                        </div>
+                                    </div>
+
+                                    <div class="box">
+                                        <span class="tit">
+                                            신청 장학금명
+                                            <em title="필수입력" class="requiredInput">
+                                                *
+                                            </em>
+                                        </span>
+                                        <div class="inpuTextBox">
+                                            <label for="name04" class="blind">신청 장학금명</label>
+                                            <input id="name04" type="text" placeholder="예: 2025년 인재육성 장학금">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- //formBox -->
+
+                                <h4>
+                                    <span>5</span>
+                                    서류 및 동의
+                                </h4>
+
+                                <div class="titleBox mb-20">
+                                    <span class="subText01">
+                                        서류 첨부
+                                    </span>
+
+                                    <span class="subText02">
+                                        각 항목에 해당하는 파일을 업로드해주세요. (PDF, DOC, JPG 등)
+                                    </span>
+                                </div>
+                                <div class="formBox">
+                                    <div class="fileBox">
+                                        <div class="titleBox">
+                                            <span class="subText01">
+                                                장학금 신청서 (시스템 자동 생성 또는 별도 양식 첨부)
+                                                <em title="필수입력" class="requiredInput">
+                                                    *
+                                                </em>
+                                            </span>
+                                            <span class="subText02">
+                                                장학금 신청서 (시스템 자동 생성 또는 별도 양식 첨부)서류를 첨부해주세요.</span>
+                                        </div>
+
+                                        <div class="inputFileBox">
+                                            <input type="file" id="uploadFile01" class="blind">
+                                            <label for="uploadFile01" class="fileLabel">선택</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="fileBox">
+                                        <div class="titleBox">
+                                            <span class="subText01">
+                                                개인정보 수집이용 동의서
+                                                <em title="필수입력" class="requiredInput">
+                                                    *
+                                                </em>
+                                            </span>
+                                            <span class="subText02">
+                                                개인정보 수집이용 동의서 서류를 첨부해주세요.</span>
+                                        </div>
+
+                                        <div class="inputFileBox">
+                                            <input type="file" id="uploadFile02" class="blind">
+                                            <label for="uploadFile02" class="fileLabel">선택</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="fileBox">
+                                        <div class="titleBox">
+                                            <span class="subText01">
+                                                주민등록등본
+                                                <em title="필수입력" class="requiredInput">
+                                                    *
+                                                </em>
+                                            </span>
+                                            <span class="subText02">
+                                                주민등록등본 서류를 첨부해주세요.
+                                            </span>
+                                        </div>
+
+                                        <div class="inputFileBox">
+                                            <input type="file" id="uploadFile03" class="blind">
+                                            <label for="uploadFile03" class="fileLabel">선택</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="fileBox">
+                                        <div class="titleBox">
+                                            <span class="subText01">
+                                                가족관계증명서
+                                            </span>
+                                        </div>
+
+                                        <div class="inputFileBox">
+                                            <input type="file" id="uploadFile04" class="blind">
+                                            <label for="uploadFile04" class="fileLabel">선택</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="fileBox">
+                                        <div class="titleBox">
+                                            <span class="subText01">
+                                                재학/졸업(예정)증명서 또는 학교장추천서
+                                                <em title="필수입력" class="requiredInput">
+                                                    *
+                                                </em>
+                                            </span>
+                                            <span class="subText02">
+                                                재학/졸업(예정)증명서 또는 학교장 추천서 서류를 첨부해주세요.</span>
+                                        </div>
+
+                                        <div class="inputFileBox">
+                                            <input type="file" id="uploadFile05" class="blind">
+                                            <label for="uploadFile05" class="fileLabel">선택</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="fileBox">
+                                        <div class="titleBox">
+                                            <span class="subText01">
+                                                성적증명서 또는 학업성취도 증빙
+                                                <em title="필수입력" class="requiredInput">
+                                                    *
+                                                </em>
+                                            </span>
+                                            <span class="subText02">
+                                                성적증명서 또는 학업성취도 증빙 서류를 첨부해주세요.</span>
+                                        </div>
+
+                                        <div class="inputFileBox">
+                                            <input type="file" id="uploadFile06" class="blind">
+                                            <label for="uploadFile06" class="fileLabel">선택</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="fileBox">
+                                        <div class="titleBox">
+                                            <span class="subText01">
+                                                건강보험료 납부확인서
+                                            </span>
+                                        </div>
+
+                                        <div class="inputFileBox">
+                                            <input type="file" id="uploadFile07" class="blind">
+                                            <label for="uploadFile07" class="fileLabel">선택</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="fileBox">
+                                        <div class="titleBox">
+                                            <span class="subText01">
+                                                건강보험 자격득실확인서
+                                            </span>
+                                        </div>
+
+                                        <div class="inputFileBox">
+                                            <input type="file" id="uploadFile08" class="blind">
+                                            <label for="uploadFile08" class="fileLabel">선택</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="fileBox">
+                                        <div class="titleBox">
+                                            <span class="subText01">
+                                                기초생활수급자/차상위계층 증명서
+                                            </span>
+                                        </div>
+
+                                        <div class="inputFileBox">
+                                            <input type="file" id="uploadFile09" class="blind">
+                                            <label for="uploadFile09" class="fileLabel">선택</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="fileBox">
+                                        <div class="titleBox">
+                                            <span class="subText01">
+                                                장애인 증명서
+                                            </span>
+                                        </div>
+
+                                        <div class="inputFileBox">
+                                            <input type="file" id="uploadFile10" class="blind">
+                                            <label for="uploadFile10" class="fileLabel">선택</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="inputCheckBox">
+                                        <input id="chk02" type="checkbox" class="blind">
+                                        <label for="chk02">개인정보 수집 및 이용에 동의합니다
+                                            <em title="필수입력" class="requiredInput">
+                                                *
+                                            </em>
+                                        </label>
+                                    </div>
+
+                                </div>
+                                <!-- //formBox -->
+
+                                <h4>
+                                    <span>5</span>
+                                    최종 확인
+                                </h4>
+
+                                <div class="formBox" style="display: block;">
+                                    <p class="subText">
+                                        제출할 신청서 내용을 확인해주세요.
+                                    </p>
+                                    <div class="inputCheckBox">
+                                        <input id="chk03" type="checkbox" class="blind">
+                                        <label for="chk03">위 내용을 모두 확인하였으며, 제출합니다.
+                                            <em title="필수입력" class="requiredInput">
+                                                *
+                                            </em>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- //formBox -->
+
+                                <div class="btnBox">
+                                    <button class="btn">
+                                        제출하기
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-
-
                     </div>
                 </div>
+
+                <!-- <img class="img img01" src="../images/sub/bg_img01.svg" alt="">
+                <img class="img img02" src="../images/sub/bg_img02.svg" alt="">
+                <img class="img img03" src="../images/sub/bg_img03.svg" alt="">
+                <img class="img img04" src="../images/sub/bg_img04.svg" alt="">
+                <img class="img img05" src="../images/sub/bg_img05.svg" alt=""> -->
+
             </div>
+            <!-- //contentWrap -->
 
         </main>
         <!-- //main -->
 
     </div>
     <!-- //wrap -->
+
+    <script>
+        $(function () {
+            $(".calendar").datepicker({
+                dateFormat: "yy-mm-dd",
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "1900:2025",
+                showOn: "button",
+                buttonImage: "/images/sub/calendar_icon01.svg",
+                buttonImageOnly: true,
+                buttonText: "Select date"
+            });
+        });
+    </script>
 
 </body>
 

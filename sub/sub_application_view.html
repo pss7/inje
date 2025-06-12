@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="" />
+    <meta name="Author" content="" />
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+    <title>조회</title>
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/sub.css">
+    <link rel="stylesheet" href="../css/aos.css">
+    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script src="../js/aos.js"></script>
+    <script src="../js/sub.js"></script>
+    <script src="../js/script.js"></script>
+
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        <header id="headerWrap">
+            <div class="logoBox">
+                <h1>
+                    <a href="../index.html">
+                        <img src="../images/common/logo.svg" alt="인제군">
+                    </a>
+                </h1>
+            </div>
+
+            <div class="linkBox">
+                <a href="#" class="link link02">인제군청홈페이지</a>
+            </div>
+        </header>
+        <!-- //headerWrap -->
+
+        <main id="sub">
+
+            <div class="contentWrap">
+                <div class="container">
+                    <div class="contentBox">
+
+
+                        <div class="titleBox mb-10">
+                            <h3 class="title text-center">
+                                조회
+                            </h3>
+                        </div>
+
+                        <ul class="tab">
+                            <li>
+                                <button class="tabBtn active">
+                                    장학생
+                                </button>
+                            </li>
+                            <li>
+                                <button class="tabBtn">
+                                    기숙사
+                                </button>
+                            </li>
+                        </ul>
+
+                        <div class="tabContentBox">
+                            <div class="viewListBox">
+                                <h4>
+                                    신청내역
+                                </h4>
+
+                                <ul class="viewList">
+                                    <li>
+                                        <div class="textBox">
+                                            <h5>
+                                                2025 인제군 인재육성 장학생 장학금
+                                            </h5>
+                                            <ul class="list">
+                                                <li>
+                                                    <span>
+                                                        이름:
+                                                    </span>
+                                                    <em>
+                                                        홍길동
+                                                    </em>
+                                                </li>
+                                                <li>
+                                                    <span>
+                                                        신청자
+                                                    </span>
+                                                    <em>
+                                                        2025-01-01
+                                                    </em>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="stateBox">
+                                            <span class="state01">신청완료</span>
+                                            <em class="state02">
+                                                심사중
+                                            </em>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="viewListBox">
+                                <h4>
+                                    신청내역
+                                </h4>
+
+                                <div class="tableBox">
+                                    <table class="table">
+                                        <caption class="blind">
+                                            기숙사 조회
+                                        </caption>
+                                        <thead>
+                                            <tr>
+                                                <th>이름</th>
+                                                <th>신청 기숙사</th>
+                                                <th>신청년도</th>
+                                                <th>신청일자</th>
+                                                <th>상태</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>홍길동</td>
+                                                <td>마포 인재육성관</td>
+                                                <td>2026</td>
+                                                <td>2025-01-01</td>
+                                                <td>신청완료</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="btnBox">
+                            <button class="btn">확인</button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- //contentWrap -->
+
+        </main>
+        <!-- //main -->
+
+    </div>
+    <!-- //wrap -->
+
+    <script>
+        $(function () {
+            $(".calendar").datepicker({
+                dateFormat: "yy-mm-dd",
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "1900:2025",
+                showOn: "button",
+                buttonImage: "/images/sub/calendar_icon01.svg",
+                buttonImageOnly: true,
+                buttonText: "Select date"
+            });
+        });
+    </script>
+
+</body>
+
+</html>
