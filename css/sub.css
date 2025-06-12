@@ -127,7 +127,7 @@
 
 @media (max-width: 767px){
 
-  .viewListBox .viewList > li{flex-direction: column; gap: 40px 0; text-align: center;}
+  .viewListBox .viewList > li{padding: 22px 20px; flex-direction: column; gap: 40px 0; text-align: center;}
   .viewListBox .viewList li .stateBox .state02{margin: 0 auto;}
 
 }
@@ -136,5 +136,7 @@
 
   .tableBox{overflow-x: auto;}
   .tableBox .table{width: 480px;}
+
+  .tab{width: 100%; flex-direction: column; gap: 7px 0; margin: 0 auto 32px;}
 
 }

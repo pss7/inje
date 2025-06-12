@@ -40,7 +40,7 @@
 #main .img05{width: 147px; height: 216px; position: absolute; top:323px; left:0; background: url(../images/main/img03.svg)no-repeat center; z-index: -1; background-size: contain; animation: ripple  5s 1.8s ease-in-out infinite alternate;}
 #main .img04{ width: 47px; height: 46px; position: absolute; top:300px; left:146px; background: url(../images/main/img04.svg)no-repeat center; background-size: contain; animation: ripple  2.5s 1.8s ease-in-out infinite alternate;}
 #main .infoWrap .infoBox{position: relative; z-index: 1;}
-#main .img03{width: 559px; height: 558px; position: absolute; top:48px; right:0; background: url(../images/main/main.svg)no-repeat center; z-index: -1; background-size: contain;   animation: glow 2.5s ease-in-out infinite alternate;}
+#main .img03{width: 559px; height: 558px; position: absolute; top:48px; right:0; background: url(../images/main/main.svg)no-repeat center; z-index: -1; background-size: contain;   animation: glow 2.5s 1.8s ease-in-out infinite alternate;}
 
 @keyframes glow {
   0% {
