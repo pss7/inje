@@ -27,8 +27,8 @@
 .selectBox{position: relative;}
 .selectBox .selectBtn{position: relative; display: block; width: 100%; padding-left: 12px; height: 45px; border: 1px solid #ccc; font-size: 14px; color: #000; border-radius: 5px; text-align: left; color: #B5B5B5; background-color: #fff;}
 .selectBox .selectBtn::after{content: ''; width: 10px; height: 6px; position: absolute; top: 50%; transform: translateY(-50%); right:13px; background: url(../images/sub/arrow_icon01.svg)no-repeat center; transition: all .5s;}
-.selectBox .selectBtn.active::after{transform: rotate(-180deg);}
-.selectBox .selectList{display: none; padding: 10px 0; position: absolute; top:52px; left:0; right: 0; border: 1px solid #ccc; background-color: #fff; border-radius: 10px; box-shadow: 10px 10px 10px rgba(0,0,0,.1);}
+.selectBox .selectBtn.active::after{transform: translateY(-50%) rotate(-180deg);}
+.selectBox .selectList{display: none; padding: 10px 0; position: absolute; top:52px; left:0; right: 0; border: 1px solid #ccc; background-color: #fff; border-radius: 10px; box-shadow: 10px 10px 10px rgba(0,0,0,.1); z-index: 99;}
 .selectBox .selectList li a{padding: 10px 5px 10px 12px; display: block; font-size: 14px; font-weight: 500; color: #000; transition: all .5s;}
 .selectBox .selectList li a:hover{background: #ddd;}
 .ui-datepicker-trigger{position: absolute; top:50%; right:15px; transform: translateY(-50%);}

@@ -1,5 +1,6 @@
 $(function () {
 
+  /* 탭 */
   $('.tabContentBox .viewListBox').hide();
   $('.tabContentBox .viewListBox').first().show();
 
@@ -13,7 +14,19 @@ $(function () {
     $('.tabContentBox .viewListBox').hide();
     $('.tabContentBox .viewListBox').eq(Idx).show();
 
-
   })
+
+  /* 선택 */
+  $('.selectBox .selectBtn').click(function () {
+
+    if ($(this).hasClass('active')) {
+      $(this).removeClass('active');
+      $(this).next().fadeOut();
+    } else {
+      $(this).addClass('active');
+      $(this).next().fadeIn();
+    }
+
+  });
 
 });
