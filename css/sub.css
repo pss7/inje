@@ -4,10 +4,6 @@
 .container{max-width: 1020px; margin: 0 auto;}
 
 /* 공통 */
-#wrap,
-#sub,
-.contentWrap{height: 100%;}
-
 #sub{position: relative;}
 .mb-10{margin-bottom: 10px!important;}
 .mb-20{margin-bottom: 20px!important;}
@@ -45,7 +41,7 @@
 .fileBox .fileLabel::before{content: ''; width: 12px; height: 11px; background: url(../images/sub/plus_icon.svg)no-repeat center;}
 .fileBox .fileName{display: block; margin-top: 5px; font-size: 14px; color: #000; font-weight: 500;}
 .requiredInput{color: #E82626;}
-.contentWrap{position: relative; padding: 70px 0; overflow: hidden; background:#f9f9f9 url(../images/sub/bg.svg)no-repeat center -60px; background-size: cover;}
+.contentWrap{position: relative; padding: 70px 0; background:#f9f9f9 url(../images/sub/bg.svg)no-repeat center -60px; background-size: cover;}
 .contentBox{position: relative; padding: 90px 180px; background-color: rgba(255,255,255, .7); border-radius: 15px; z-index: 1;}
 .titleBox {margin-bottom: 60px;}
 .titleBox .title{margin-bottom: 26px; font-size: 42px; font-weight: 700; color: #000; line-height: 1.4;}

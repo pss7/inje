@@ -1,6 +1,15 @@
 @charset "utf-8";
 
 @font-face {
+    font-family: 'Recipekorea';
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/Recipekorea.woff2) format('font-woff2'),
+        url(fonts/Recipekorea.woff) format('woff'),
+        url(fonts/Recipekorea.otf) format('opentype'),
+}
+
+@font-face {
     font-family: 'Pretendard';
     font-style: normal;
     font-weight: 900;

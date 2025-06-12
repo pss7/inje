@@ -67,15 +67,15 @@
 
 #main .infoWrap .infoBox .img01.active{bottom: 62px;}
 #main .infoWrap .infoBox .img02.active{bottom: 0;}
-#main .infoWrap h2{font-size: 58px; color: #292929; font-weight: 800; line-height: 1.4;}
-#main .infoWrap h2 span{display: block;}
+#main .infoWrap h2{font-size: 46px; color: #292929; font-weight: 800; line-height: 1.4;}
+#main .infoWrap h2 span{display: block; font-family: 'Recipekorea';}
 #main .infoWrap h2 p{margin-top: 20px;  font-size: 22px; color: #292929; font-weight: 500;}
 #main .infoWrap .titleBox{margin-bottom: 50px;}
 #main .infoWrap .linkList{display: flex; gap: 0 30px;}
 #main .infoWrap .linkList li{ display: flex; flex-direction: column; width: 250px; height: 287px; border: 1px solid #c8e6e6; border-radius: 15px; background-color: #fff;}
 #main .infoWrap .linkList li .infoText{padding: 32px 0 0;}
-#main .infoWrap .linkList li .infoText h3{font-size: 24px; color: #292929; font-weight: 600; text-align: center;} 
-#main .infoWrap .linkList li .infoText h3{display: flex; flex-direction: column; align-items: center; gap: 0 0;}
+#main .infoWrap .linkList li .infoText h3{font-size: 18px; color: #292929; font-weight: 600; text-align: center;} 
+#main .infoWrap .linkList li .infoText h3{display: flex; flex-direction: column; align-items: center; gap: 0 0; font-family: 'Recipekorea';}
 #main .infoWrap .linkList li .infoText h3::after{content: '';}
 #main .infoWrap .linkList li:nth-child(1) .infoText h3{gap: 15px 0;}
 #main .infoWrap .linkList li:nth-child(1) .infoText h3:after{width: 124px; height: 112px; background: url(../images/main/link_img01.svg)no-repeat center; background-size: contain;}
