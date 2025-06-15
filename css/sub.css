@@ -4,6 +4,11 @@
 .container{max-width: 1020px; margin: 0 auto;}
 
 /* 공통 */
+#wrap,
+#sub,
+.contentWrap,
+.container{height: 100%;}
+
 #sub{position: relative;}
 .mb-10{margin-bottom: 10px!important;}
 .mb-20{margin-bottom: 20px!important;}
