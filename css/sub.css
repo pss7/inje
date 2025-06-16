@@ -4,10 +4,11 @@
 .container{max-width: 1020px; margin: 0 auto;}
 
 /* 공통 */
+html,
+body{height: 100%;}
 #wrap,
 #sub,
-.contentWrap,
-.container{height: 100%;}
+.contentWrap{min-height: calc(100vh - 98px);}
 
 #sub{position: relative;}
 .mb-10{margin-bottom: 10px!important;}
@@ -61,6 +62,14 @@
 .infoInputbox .formBox .fileBox{margin-bottom: -10px;}
 .infoInputbox .formBox  .subText{margin-bottom: 5px; font-size: 14px; color: #000; font-weight: 600;}
 .btnBox .btn{display: block; width: 337px; height: 54px; line-height: 54px; margin: 100px auto 0; border-radius: 10px; background-color: #0FC1BF; color: #fff; text-align: center; font-size: 18px; font-weight: 600;}
+
+@media (max-width: 1199px){
+
+  #wrap,
+  #sub,
+  .contentWrap{min-height: calc(100vh - 60px);}
+
+}
 
 /* 기숙사신청 */
 .dormitoryApplicationBox .titleBox{margin-bottom: 25px;}
