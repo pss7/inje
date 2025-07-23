@@ -42,6 +42,7 @@
 #sidebarWrap .menuBtn::after{content: ''; width: 24px; height: 22px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: url(../images/common/menu_icon.svg)no-repeat center;}
 #sidebarWrap .menuList li{margin-bottom: 54px;}
 #sidebarWrap .menuList li a{display: block;}
+#sidebarWrap .menuList li a:hover em{color: #27A297;}
 #sidebarWrap .menuList li a .icon{margin-bottom: 8px; position: relative; width: 58px; height: 58px; border-radius: 50%;background-color: #fff; transition: all 1s ease, box-shadow 1s ease;}
 #sidebarWrap .menuList li a .icon::after{content: ''; position: absolute; top: 50%; left:50%; transform: translate(-50%, -50%);}
 #sidebarWrap .menuList li a .icon01::after{width: 30px; height: 27px; background: url(../images/common/icon01.svg)no-repeat center;}
@@ -49,7 +50,7 @@
 #sidebarWrap .menuList li a .icon03::after{width: 32px; height: 33px; background: url(../images/common/icon03.svg)no-repeat center;}
 #sidebarWrap .menuList li a .icon04::after{width: 28px; height: 33px; background: url(../images/common/icon04.svg)no-repeat center;}
 #sidebarWrap .menuList li a .icon05::after{width: 28px; height: 32px; background: url(../images/common/icon05.svg)no-repeat center;}
-#sidebarWrap .menuList li a em{display: block; font-size: 13px; font-weight: 700; color: #525C64; text-align: center; font-family: 'GmarketSans';}
+#sidebarWrap .menuList li a em{display: block; font-size: 13px; font-weight: 700; color: #525C64; text-align: center; font-family: 'GmarketSans'; transition: all .5s;}
 #sidebarWrap .menuList li a:hover .icon {background-color: #27A297; transform: scale(1.08);
   box-shadow: 0 0 10px rgba(39, 162, 151, 0.4), 0 0 20px rgba(39, 162, 151, 0.2); color: #fff;}
 #sidebarWrap .menuList li a:hover .icon01::after{background: url(../images/common/icon01_hover.svg)no-repeat center;}
