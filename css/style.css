@@ -28,6 +28,7 @@
 
 @media (max-width: 1199px){
 
+  #headerWrap .menuBtn{display: none!important;}
   #headerWrap{position: relative; padding: 10px 20px;}
   #headerWrap .logoBox h1 a img{width: 150px;}
   #headerWrap .loginBox{right: 20px;}
