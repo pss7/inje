@@ -66,4 +66,24 @@
 }
 
 /* 푸터 */
-#footerWrap{padding: 17px 20px; background-color: #273248; text-align: center; color: #888E9B; font-size: 11px; font-weight: 500;}
+#footerWrap{position: relative; display: flex; align-items: center; padding: 17px 20px 17px 150px; background-color: #273248; text-align: center;}
+#footerWrap .course{color: #888E9B; font-size: 15px; font-weight: 500; transition: all .5s;}
+#footerWrap .course:hover{color: #fff;}
+#footerWrap .copyright{position: absolute; left:50%; transform: translateX(-50%); color: #888E9B; font-size: 15px; font-weight: 500;}
+
+@media (max-width: 1199px){
+
+  #footerWrap{padding: 17px 20px;}
+  #footerWrap .course,
+  #footerWrap .copyright{font-size: 12px;}
+
+}
+
+@media (max-width: 576px){
+
+  #footerWrap{padding: 20px; flex-direction: column; gap: 20px 0;}
+  #footerWrap .course{position: relative;}
+  #footerWrap .course::after{content: ''; position: absolute; bottom: -10px; left:50%; width: 12px; height: 1px; background-color: #888E9B; margin-left: -6px;}
+  #footerWrap .copyright{position: static; transform: none;}
+
+}
