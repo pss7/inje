@@ -69,7 +69,7 @@
 #footerWrap{position: relative; display: flex; align-items: center; padding: 17px 20px 17px 150px; background-color: #273248; text-align: center;}
 #footerWrap .course{color: #888E9B; font-size: 15px; font-weight: 500; transition: all .5s;}
 #footerWrap .course:hover{color: #fff;}
-#footerWrap .copyright{position: absolute; left:50%; transform: translateX(-50%); color: #888E9B; font-size: 15px; font-weight: 500;}
+#footerWrap .copyright{position: absolute; left:53%; transform: translateX(-50%); color: #888E9B; font-size: 15px; font-weight: 500;}
 
 @media (max-width: 1199px){
 
