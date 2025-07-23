@@ -4,9 +4,13 @@
 #mainWrap{display: flex; justify-content: center; align-items: center; position: relative; height: 100vh; overflow: hidden;}
 #mainWrap::after{content: ''; position: absolute; top:0; left:0; right:0; bottom: 0; background: url(../images/main/main_bg.svg)no-repeat center top; background-size: cover; transform: scale(1.35); transition: all 7s; z-index: -1;}
 #mainWrap.active::after{transform: scale(1);}
-.mainContentBox{max-width: 1490px; width: 100%; padding: 90px 0 0 90px; display: flex; align-items: flex-end; justify-content: center; gap: 0 50px;}
-.mainContentBox .slideBox{position: relative; width: 825px; height: 578px; border-radius: 30px; overflow: hidden;}
-.mainContentBox .slideBox .slide{height: 578px;}
+.mainContentBox{width: 100%; height: 100%; padding: 90px 0 0 90px; display: flex; align-items: center;  justify-content: center; gap: 0 50px;}
+.mainContentBox .slideBox{position: relative; width: 45.5%; height: 70%; border-radius: 30px; overflow: hidden;}
+.mainContentBox .slick-slider,
+.mainContentBox .slick-list,
+.mainContentBox .slick-track{height: 100%;}
+
+
 .mainContentBox .slideBox img{display: block; width: 100%; height: 100%; object-fit: cover;}
 .mainContentBox .slideBox .controlBox01 button{width: 68px; height: 68px; position: absolute; top: 50%; transform: translateY(-50%);}
 .mainContentBox .slideBox .controlBox01 button.prev{left: 20px; background: url(../images/main/prev_icon01.svg) no-repeat center; background-size: contain;}
@@ -22,9 +26,10 @@
     border-left: 10px solid #fff;}
 .mainContentBox .slideBox .controlBox02 .prev{width: 12px; height: 18px; background: url(../images/main/prev_icon02.svg)no-repeat center; background-size: contain;}
 .mainContentBox .slideBox .controlBox02 .next{width: 12px; height: 18px; background: url(../images/main/next_icon02.svg)no-repeat center; background-size: contain;}
+.mainContentBox .menuBox{width: 34%; height: 70%;}
 .mainContentBox .menuBox h2{margin-bottom: 15px; font-size: 42px; font-weight: 700; color: #484848;}
 .mainContentBox .menuBox h2 strong{color: #05988D;}
-.mainContentBox .menuBox .menuList{position: relative; padding:10px; display: flex; flex-wrap: wrap; width: 616px; height: 468px; border-radius: 30px; background-color: rgba(255, 255, 255, 0.9);}
+.mainContentBox .menuBox .menuList{height: 81.5%; position: relative; padding:10px; display: flex; flex-wrap: wrap; border-radius: 30px; background-color: rgba(255, 255, 255, 0.9);}
 .mainContentBox .menuBox .menuList::after{content: ''; height: 1px; position: absolute; top: 50%; left:65px; right:65px; background-color: #C5C5C5;}
 .mainContentBox .menuBox .menuList li {position: relative; width: 50%;}
 .mainContentBox .menuBox .menuList li::after{content: ''; position: absolute; top: 50%; margin-top: -60px; right:0; width: 1px; height: 120px; background-color: #C5C5C5;}
