@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 900;
+    src: url(fonts/Pretendard-Black.woff2) format('font-woff2'),
+        url(fonts/Pretendard-Black.woff) format('woff'),
+        url(fonts/Pretendard-Black.otf) format('opentype'),
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 800;
+    src: url(fonts/Pretendard-ExtraBold.woff2) format('font-woff2'),
+        url(fonts/Pretendard-ExtraBold.woff) format('woff'),
+        url(fonts/Pretendard-ExtraBold.otf) format('opentype'),
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 600;
+    src: url(fonts/Pretendard-SemiBold.woff2) format('font-woff2'),
+        url(fonts/Pretendard-SemiBold.woff) format('woff'),
+        url(fonts/Pretendard-SemiBold.otf) format('opentype'),
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 500;
+    src: url(fonts/Pretendard-Medium.woff2) format('font-woff2'),
+        url(fonts/Pretendard-Medium.woff) format('woff'),
+        url(fonts/Pretendard-Medium.otf) format('opentype'),
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/Pretendard-Regular.woff2) format('font-woff2'),
+        url(fonts/Pretendard-Regular.woff) format('woff'),
+        url(fonts/Pretendard-Regular.otf) format('opentype'),
+}
+
+@font-face {
+    font-family: 'GmarketSans';
+    font-style: normal;
+    font-weight: 700;
+    src: url(fonts/GmarketSansBold.woff2) format('font-woff2'),
+        url(fonts/GmarketSansBold.woff) format('woff'),
+        url(fonts/GmarketSansBold.otf) format('opentype'),
+}
+

@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+/* 메인 */
+#mainWrap{display: flex; justify-content: center; align-items: center; position: relative; height: 100vh; overflow: hidden;}
+#mainWrap::after{content: ''; position: absolute; top:0; left:0; right:0; bottom: 0; background: url(../images/main/main_bg.svg)no-repeat center top; background-size: cover; transform: scale(1.35); transition: all 7s; z-index: -1;}
+#mainWrap.active::after{transform: scale(1);}
+.mainContentBox{max-width: 1490px; width: 100%; padding: 90px 0 0 90px; display: flex; align-items: flex-end; justify-content: center; gap: 0 50px;}
+.mainContentBox .slideBox{position: relative; width: 825px; height: 578px; border-radius: 30px; overflow: hidden;}
+.mainContentBox .slideBox .slide{height: 578px;}
+.mainContentBox .slideBox img{display: block; width: 100%; height: 100%; object-fit: cover;}
+.mainContentBox .slideBox .controlBox01 button{width: 68px; height: 68px; position: absolute; top: 50%; transform: translateY(-50%);}
+.mainContentBox .slideBox .controlBox01 button.prev{left: 20px; background: url(../images/main/prev_icon01.svg) no-repeat center; background-size: contain;}
+.mainContentBox .slideBox .controlBox01 button.next{right: 20px; background: url(../images/main/next_icon01.svg) no-repeat center; background-size: contain;}
+.mainContentBox .slideBox .controlBox02{padding: 0 46px 0 50px; justify-content: space-between; display: flex; align-items: center; width: 389px; height: 73px; position: absolute; left:0; bottom: 0; background-color: #101742; border-radius: 0 30px 0 0;}
+.mainContentBox .slideBox .controlBox02 .box{display: flex; align-items: center; gap: 0 17px;}
+.mainContentBox .slideBox .controlBox02 .count{position: relative; display: flex; align-items: center; gap: 0 40px; font-size: 18px; font-weight: 600; color: #fff;}
+.mainContentBox .slideBox .controlBox02 .count::after{content: ''; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); width: 20px; height: 1px; background-color: #fff;}
+.mainContentBox .slideBox .controlBox02 .count em{color: #00EEFF;}
+.mainContentBox .slideBox .controlBox02 .pause{width: 10px; height: 15px; background: url(../images/main/pause_icon.svg) no-repeat center; background-size: contain;}
+.mainContentBox .slideBox .controlBox02 .play{display: none; width: 0; height: 0;
+    border-top: 7.5px solid transparent; border-bottom: 7.5px solid transparent;
+    border-left: 10px solid #fff;}
+.mainContentBox .slideBox .controlBox02 .prev{width: 12px; height: 18px; background: url(../images/main/prev_icon02.svg)no-repeat center; background-size: contain;}
+.mainContentBox .slideBox .controlBox02 .next{width: 12px; height: 18px; background: url(../images/main/next_icon02.svg)no-repeat center; background-size: contain;}
+.mainContentBox .menuBox h2{margin-bottom: 15px; font-size: 42px; font-weight: 700; color: #484848;}
+.mainContentBox .menuBox h2 strong{color: #05988D;}
+.mainContentBox .menuBox .menuList{position: relative; padding:10px; display: flex; flex-wrap: wrap; width: 616px; height: 468px; border-radius: 30px; background-color: rgba(255, 255, 255, 0.9);}
+.mainContentBox .menuBox .menuList::after{content: ''; height: 1px; position: absolute; top: 50%; left:65px; right:65px; background-color: #C5C5C5;}
+.mainContentBox .menuBox .menuList li {position: relative; width: 50%;}
+.mainContentBox .menuBox .menuList li::after{content: ''; position: absolute; top: 50%; margin-top: -60px; right:0; width: 1px; height: 120px; background-color: #C5C5C5;}
+.mainContentBox .menuBox .menuList li:nth-child(2)::after,
+.mainContentBox .menuBox .menuList li:nth-child(4)::after{display: none;}
+.mainContentBox .menuBox .menuList li a{display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; text-align: center;}
+.mainContentBox .menuBox .menuList li a h3{gap: 20px 0; display: flex; flex-direction: column; align-items: center; font-size: 24px; color: #354455; transition: all .5s;}
+.mainContentBox .menuBox .menuList li a h3::before{content: ''; transition: all .5s;}
+.mainContentBox .menuBox .menuList li:nth-child(1) a h3::before{width: 52px; height: 56px; background: url(../images/main/icon01.svg)no-repeat center; background-size: contain;}
+.mainContentBox .menuBox .menuList li:nth-child(2) a h3::before{width: 60px; height: 54px; background: url(../images/main/icon02.svg)no-repeat center; background-size: contain;}
+.mainContentBox .menuBox .menuList li:nth-child(3) a h3::before{width: 70px; height: 56px; background: url(../images/main/icon03.svg)no-repeat center; background-size: contain;}
+.mainContentBox .menuBox .menuList li:nth-child(4) a h3::before{width: 66px; height: 56px; background: url(../images/main/icon04.svg)no-repeat center; background-size: contain;}
+.mainContentBox .menuBox .menuList li a:hover h3{color: #27A297;}
+.mainContentBox .menuBox .menuList li a:hover h3::before{transform: translateY(-10px);}
+
+@media (max-width: 1560px){
+
+  .mainContentBox{padding: 90px 20px 0 110px;}
+
+}
+
+@media (max-width: 1199px){
+
+  #mainWrap{height: auto;}
+  .mainContentBox{padding: 50px 20px; flex-direction: column; gap: 50px 0;}
+  .mainContentBox .slideBox{width: 100%;}
+  .mainContentBox .menuBox,
+  .mainContentBox .menuBox .menuList{width: 100%;}
+  .mainContentBox .menuBox .menuList,
+  .mainContentBox .slideBox{border-radius: 15px;}
+  .mainContentBox .menuBox h2{font-size: 36px;}
+
+}
+
+@media (max-width: 767px){
+
+  .mainContentBox .slideBox .controlBox01 button{width: 50px; height: 50px;}
+  .mainContentBox .slideBox,
+  .mainContentBox .slideBox .slide{height: 460px;}
+  .mainContentBox .menuBox h2{font-size: 32px;}
+  .mainContentBox .menuBox .menuList{height: 400px; padding: 0;}
+  .mainContentBox .menuBox .menuList li a h3{font-size: 22px;}
+  .mainContentBox .menuBox .menuList li:nth-child(1) a h3::before{width: 42px; height: 46px;}
+  .mainContentBox .menuBox .menuList li:nth-child(2) a h3::before{width: 50px; height: 44px;}
+  .mainContentBox .menuBox .menuList li:nth-child(3) a h3::before{width: 60px; height: 46px;}
+  .mainContentBox .menuBox .menuList li:nth-child(4) a h3::before{width: 56px; height: 46px;}
+    .mainContentBox .menuBox .menuList,
+  .mainContentBox .slideBox{border-radius: 8px;}
+
+}
+
+@media (max-width: 414px){
+
+  .mainContentBox .slideBox .controlBox02 .prev,
+  .mainContentBox .slideBox .controlBox02 .next{width: 8px; height: 14px;}
+  .mainContentBox .slideBox .controlBox02 .pause{width: 8px; height: 12px;}
+  .mainContentBox .slideBox .controlBox02 .play{border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent; border-left: 8px solid #fff;}
+  .mainContentBox .slideBox .controlBox01 button{width: 40px; height: 40px;}
+  .mainContentBox .slideBox .controlBox02 .count{font-size: 14px;}
+  .mainContentBox .slideBox,
+  .mainContentBox .slideBox .slide{height: 320px;}
+  .mainContentBox .slideBox .controlBox02{padding: 0 20px; max-width: 244px; width: 100%; height: 49px; border-radius: 0 20px 0 0;} 
+  .mainContentBox .menuBox h2{font-size: 26px;}
+  .mainContentBox .menuBox .menuList li a h3{font-size: 18px;}
+  .mainContentBox .menuBox .menuList li:nth-child(1) a h3::before{width: 32px; height: 36px;}
+  .mainContentBox .menuBox .menuList li:nth-child(2) a h3::before{width: 40px; height: 34px;}
+  .mainContentBox .menuBox .menuList li:nth-child(3) a h3::before{width: 50px; height: 36px;}
+  .mainContentBox .menuBox .menuList li:nth-child(4) a h3::before{width: 46px; height: 36px;}
+  .mainContentBox .menuBox .menuList{height: 320px;}
+  .mainContentBox .menuBox .menuList::after{left: 30px; right: 30px;}
+
+}
+
+@media (max-width: 320px){
+
+  .mainContentBox .menuBox .menuList li a h3{padding-top: 10px; gap: 10px 0; font-size: 14px;}
+  .mainContentBox .menuBox .menuList{height: 255px;}
+  .mainContentBox .menuBox .menuList li:nth-child(1) a h3::before{width: 22px; height: 26px;}
+  .mainContentBox .menuBox .menuList li:nth-child(2) a h3::before{width: 30px; height: 24px;}
+  .mainContentBox .menuBox .menuList li:nth-child(3) a h3::before{width: 40px; height: 26px;}
+  .mainContentBox .menuBox .menuList li:nth-child(4) a h3::before{width: 36px; height: 26px;}
+  .mainContentBox .menuBox .menuList li::after{height: 80px; margin-top: -40px;}
+
+}

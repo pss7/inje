@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+/* 헤더 */
+#headerWrap{position: absolute; top:-200px; left:0; right:0; padding: 17px 60px 17px 150px; display: flex; align-items: center;  background-color: #fff; z-index: 999; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); transition: all 1.5s;}
+#headerWrap.active{top:0;}
+#headerWrap .logoBox h1 a,
+#headerWrap .logoBox h1 a img{display: block;}
+#headerWrap .loginBox{position: absolute; top: 50%; transform: translateY(-50%); right: 60px;}
+#headerWrap .loginBox .login{position: relative; padding: 11px 38px; background-color: #F7F8FA; border-radius: 50px;}
+#headerWrap .loginBox .login::before{content: ''; position: absolute; top:0; left:0; bottom: 0; width: 0; border-radius: 50px; background-color: #27A297; transition: all .5s;}
+#headerWrap .loginBox .login span{position: relative; padding-left: 31px; font-weight: 700; color: #5C6471; transition: all .5s;}
+#headerWrap .loginBox .login span::before{width: 20px; height: 20px; content: ''; position: absolute; top: 50%; transform: translateY(-50%); left:0; background: url(../images/common/login_icon.svg)no-repeat center;}
+#headerWrap .loginBox .login:hover span{color: #fff;}
+#headerWrap .loginBox .login:hover::before{width: 100%;}
+#headerWrap .loginBox .login:hover span::before{background: url(../images/common/login_hover_icon.svg)no-repeat center;}
+#headerWrap .menuBtn{position: absolute; left:0; top:0; bottom: 0; display: block; width: 90px; background-color: #F3F4F8;}
+#headerWrap .menuBtn::after{content: ''; width: 24px; height: 22px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: url(../images/common/menu_icon.svg)no-repeat center;}
+#headerWrap .loginBox .name{display: flex; align-items: center; gap: 0 8px; margin-right: 42px; font-weight: 700; color: #A0A8B4;}
+#headerWrap .loginBox .name::before{content: ''; width: 18px; height: 20px; background: url(../images/common/icon06.svg) no-repeat center;}
+#headerWrap .loginBox .name strong{color: #27A297; font-size: 20px;}
+#headerWrap .loginBox .box{display: flex; align-items: center;}
+#headerWrap .loginBox .box a{display: block; font-weight: 700; color: #A0A8B4;}
+#headerWrap .loginBox .infoList li a{display: block;}
+#headerWrap .loginBox .infoList li{position: relative;}
+#headerWrap .loginBox .infoList li::after{content: ''; position: absolute; top:4px; right:-14px; width: 1px; height: 14px; background-color: #D0D3DA;}
+#headerWrap .loginBox .infoList li:last-child:after{display: none;}
+#headerWrap .loginBox .infoList{display: flex; align-items: center; gap: 0 30px;}
+
+@media (max-width: 1199px){
+
+  #headerWrap{position: relative; padding: 10px 20px;}
+  #headerWrap .logoBox h1 a img{width: 150px;}
+  #headerWrap .loginBox{right: 20px;}
+  #headerWrap .loginBox .login{padding: 9px 23px;}
+
+}
+
+/* 사이드바 */
+#sidebarWrap{display: flex; flex-direction: column; align-items: center; position: fixed; top:0; left:-500px; bottom: 0; width: 90px; height: 100%; background-color: #F3F4F8; z-index: 999; transition: all 1.5s;}
+#sidebarWrap.active{left:0;}
+#sidebarWrap .menuBtn{margin-bottom: 23px; position: relative; display: block; height: 90px; width: 100%; }
+#sidebarWrap .menuBtn::after{content: ''; width: 24px; height: 22px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: url(../images/common/menu_icon.svg)no-repeat center;}
+#sidebarWrap .menuList li{margin-bottom: 54px;}
+#sidebarWrap .menuList li a{display: block;}
+#sidebarWrap .menuList li a .icon{margin-bottom: 8px; position: relative; width: 58px; height: 58px; border-radius: 50%;background-color: #fff; transition: all 1s ease, box-shadow 1s ease;}
+#sidebarWrap .menuList li a .icon::after{content: ''; position: absolute; top: 50%; left:50%; transform: translate(-50%, -50%);}
+#sidebarWrap .menuList li a .icon01::after{width: 30px; height: 27px; background: url(../images/common/icon01.svg)no-repeat center;}
+#sidebarWrap .menuList li a .icon02::after{width: 32px; height: 27px; background: url(../images/common/icon02.svg)no-repeat center;}
+#sidebarWrap .menuList li a .icon03::after{width: 32px; height: 33px; background: url(../images/common/icon03.svg)no-repeat center;}
+#sidebarWrap .menuList li a .icon04::after{width: 28px; height: 33px; background: url(../images/common/icon04.svg)no-repeat center;}
+#sidebarWrap .menuList li a .icon05::after{width: 28px; height: 32px; background: url(../images/common/icon05.svg)no-repeat center;}
+#sidebarWrap .menuList li a em{display: block; font-size: 13px; font-weight: 700; color: #525C64; text-align: center; font-family: 'GmarketSans';}
+#sidebarWrap .menuList li a:hover .icon {background-color: #27A297; transform: scale(1.08);
+  box-shadow: 0 0 10px rgba(39, 162, 151, 0.4), 0 0 20px rgba(39, 162, 151, 0.2); color: #fff;}
+#sidebarWrap .menuList li a:hover .icon01::after{background: url(../images/common/icon01_hover.svg)no-repeat center;}
+#sidebarWrap .menuList li a:hover .icon02::after{background: url(../images/common/icon02_hover.svg)no-repeat center;}
+#sidebarWrap .menuList li a:hover .icon03::after{background: url(../images/common/icon03_hover.svg)no-repeat center;}
+#sidebarWrap .menuList li a:hover .icon04::after{background: url(../images/common/icon04_hover.svg)no-repeat center;}
+#sidebarWrap .menuList li a:hover .icon05::after{background: url(../images/common/icon05_hover.svg)no-repeat center;}
+
+@media (max-width: 1199px){
+
+  #sidebarWrap{display: none;}
+
+}
+
+/* 푸터 */
+#footerWrap{padding: 17px 20px; background-color: #273248; text-align: center; color: #888E9B; font-size: 11px; font-weight: 500;}
