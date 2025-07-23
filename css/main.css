@@ -9,8 +9,6 @@
 .mainContentBox .slick-slider,
 .mainContentBox .slick-list,
 .mainContentBox .slick-track{height: 100%;}
-
-
 .mainContentBox .slideBox img{display: block; width: 100%; height: 100%; object-fit: cover;}
 .mainContentBox .slideBox .controlBox01 button{width: 68px; height: 68px; position: absolute; top: 50%; transform: translateY(-50%);}
 .mainContentBox .slideBox .controlBox01 button.prev{left: 20px; background: url(../images/main/prev_icon01.svg) no-repeat center; background-size: contain;}
@@ -29,10 +27,10 @@
 .mainContentBox .menuBox{width: 34%; height: 70%;}
 .mainContentBox .menuBox h2{margin-bottom: 15px; font-size: 42px; font-weight: 700; color: #484848;}
 .mainContentBox .menuBox h2 strong{color: #05988D;}
-.mainContentBox .menuBox .menuList{height: 81.5%; position: relative; padding:10px; display: flex; flex-wrap: wrap; border-radius: 30px; background-color: rgba(255, 255, 255, 0.9);}
+.mainContentBox .menuBox .menuList{padding-top: 30px; height: 85.5%; position: relative; padding:10px; display: flex; flex-wrap: wrap; border-radius: 30px; background-color: rgba(255, 255, 255, 0.9);}
 .mainContentBox .menuBox .menuList::after{content: ''; height: 1px; position: absolute; top: 50%; left:65px; right:65px; background-color: #C5C5C5;}
 .mainContentBox .menuBox .menuList li {position: relative; width: 50%;}
-.mainContentBox .menuBox .menuList li::after{content: ''; position: absolute; top: 50%; margin-top: -60px; right:0; width: 1px; height: 120px; background-color: #C5C5C5;}
+.mainContentBox .menuBox .menuList li::after{content: ''; position: absolute; top: 50%; transform: translateY(-50%); right:0; width: 1px; height: 55%; background-color: #C5C5C5;}
 .mainContentBox .menuBox .menuList li:nth-child(2)::after,
 .mainContentBox .menuBox .menuList li:nth-child(4)::after{display: none;}
 .mainContentBox .menuBox .menuList li a{display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; text-align: center;}
