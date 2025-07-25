@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+main{display: flex; justify-content: center; align-items: center; position: relative; height: 100vh; overflow: hidden;}
+main::after{content: ''; position: absolute; top:0; left:0; right:0; bottom: 0; background: url(../images/main/main_bg.svg)no-repeat center top; background-size: cover; transform: scale(1.35); transition: all 7s; z-index: -1;}
+main.active::after{transform: scale(1);}
+
 /* 헤더 */
 #headerWrap{position: absolute; top:-200px; left:0; right:0; padding: 17px 60px 17px 150px; display: flex; align-items: center;  background-color: #fff; z-index: 999; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); transition: all 1.5s;}
 #headerWrap.active{top:0;}
@@ -16,7 +20,7 @@
 #headerWrap .menuBtn{position: absolute; left:0; top:0; bottom: 0; display: block; width: 90px; background-color: #F3F4F8;}
 #headerWrap .menuBtn::after{content: ''; width: 24px; height: 22px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: url(../images/common/menu_icon.svg)no-repeat center;}
 #headerWrap .loginBox .name{display: flex; align-items: center; gap: 0 8px; margin-right: 42px; font-weight: 700; color: #A0A8B4;}
-#headerWrap .loginBox .name::before{content: ''; width: 18px; height: 20px; background: url(../images/common/icon06.svg) no-repeat center;}
+#headerWrap .loginBox .name::before{content: ''; width: 18px; height: 20px; background: url(../images/common/icon06.svg) no-repeat center; background-size: contain;}
 #headerWrap .loginBox .name strong{color: #27A297; font-size: 20px;}
 #headerWrap .loginBox .box{display: flex; align-items: center;}
 #headerWrap .loginBox .box a{display: block; font-weight: 700; color: #A0A8B4;}
@@ -33,6 +37,37 @@
   #headerWrap .logoBox h1 a img{width: 150px;}
   #headerWrap .loginBox{right: 20px;}
   #headerWrap .loginBox .login{padding: 9px 23px;}
+  #headerWrap .loginBox .infoList{gap: 0 12px;}
+  #headerWrap .loginBox .infoList li::after{top: 5px; right:-6px; height: 9px;}
+  #headerWrap .loginBox .name{margin-right: 16px; gap: 0 5px; font-size: 14px;}
+  #headerWrap .loginBox .name::before{margin-top: -2px; width: 14px; height: 16px;}
+  #headerWrap .loginBox .name strong{font-size: 14px;}
+  #headerWrap .loginBox .box a{font-size: 14px;}
+
+}
+
+@media (max-width: 480px){
+
+  #headerWrap .loginBox .name{gap: 0 2px; margin-right: 10px; font-size: 12px;}
+  #headerWrap .loginBox .name strong{font-size: 12px;}
+  #headerWrap .loginBox .box a{font-size: 12px;}
+  #headerWrap .loginBox .infoList li::after{height: 9px; top: 4px; right: -6px;}
+  
+}
+
+@media (max-width: 414px){
+
+  #headerWrap .logoBox h1 a img{width: 110px;}
+  #headerWrap .loginBox .login{padding: 9px 15px;}
+  #headerWrap .loginBox .login span{font-size: 14px;}
+
+  #headerWrap .loginBox .name{margin-right: 5px; font-size: 10px;}
+  #headerWrap .loginBox .name::before{width: 10px; height: 12px;}
+  #headerWrap .loginBox .name strong{font-size: 10px;}
+  #headerWrap .loginBox .box a{font-size: 10px;}
+  #headerWrap .loginBox .infoList li::after{top: 3px; right: -7px;}
+  
+  
 
 }
 
@@ -67,7 +102,7 @@
 }
 
 /* 푸터 */
-#footerWrap{position: relative; display: flex; align-items: center; padding: 17px 20px 17px 150px; background-color: #273248; text-align: center;}
+#footerWrap{position: relative; display: flex; align-items: center; padding: 17px 20px 17px 150px; background-color: #273248; text-align: center; z-index: 99;}
 #footerWrap .course{color: #888E9B; font-size: 15px; font-weight: 500; transition: all .5s;}
 #footerWrap .course:hover{color: #fff;}
 #footerWrap .copyright{position: absolute; left:53%; transform: translateX(-50%); color: #888E9B; font-size: 15px; font-weight: 500;}

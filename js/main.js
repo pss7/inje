@@ -1,14 +1,6 @@
 
 $(function () {
 
-  //aos 초기화
-  $(window).load(function () {
-    AOS.init({
-      duration: 2000
-    });
-    $('#mainWrap').addClass('active');
-  });
-
   $('#mainWrap .slick').on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
     var i = (currentSlide ? currentSlide : 0) + 1;
     $('.controlBox02 .count').html('<em>' + i + '</em>' + slick.slideCount);
