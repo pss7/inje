@@ -60,7 +60,7 @@ html, body{height: 100%;}
 .titleBox .title{margin-bottom: 26px; font-size: 42px; font-weight: 700; color: #000; line-height: 1.4;}
 .titleBox .subText01{display: block; margin-bottom: 3px; font-weight: 700; color: #000;}
 .titleBox .subText02{display: block; font-size: 14px; color: #7e7e7e;}
-.infoInputbox{ padding-right: 25px; padding-bottom: 50px; height: 39vh; overflow-y: auto;}
+.infoInputbox{position: relative; padding-right: 25px; padding-bottom: 50px; height: 39vh; overflow-y: auto;}
 .infoInputbox h4{margin-bottom: 20px;}
 .infoInputbox h4 span{margin-top: -2px; width: 20px; height: 20px; font-weight: 700; color: #fff; background-color: #0FC1BF; border-radius: 50px; text-align: center; font-size: 14px;}
 .infoInputbox h4{padding-bottom: 8px; display: flex; align-items: center; gap: 0 5px; border-bottom: 1px solid #000; font-size: 19px; color: #000; font-weight: 700;}
@@ -80,7 +80,7 @@ html, body{height: 100%;}
 
 @media (max-width: 1199px){
 
-
+  .infoInputbox{padding-bottom: 30px;}
   .contentBox{ width: 100%; border-radius: 7px;}
 
 }
