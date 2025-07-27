@@ -169,7 +169,6 @@ html, body{height: 100%;}
 }
 
 /* 개인정보 수집·이용 동의 */
-.certificationBox{padding: 78px 0 0;}
 .certificationBox .orderBox{text-align: center; margin-bottom: 45px;}
 .certificationBox .orederList{position: relative; gap: 0 25px; display: inline-flex; align-items: center; justify-content: center; z-index: 1;}
 .certificationBox .orederList::before{content: ''; position: absolute; top: 50%; transform: translateY(-50%); left:0; right:0; height: 1px; background-color: #ddd; z-index: -1;}
