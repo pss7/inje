@@ -27,6 +27,8 @@ $(function () {
       $(this).next().fadeIn();
     }
 
+    return false;
+
   });
 
   //동의 체크 시 버튼 활성화
