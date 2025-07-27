@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
-#wrap{display: flex; flex-direction: column;}
-/* html, body, #wrap{height: 100%;} */
+html, body{height: 100%;}
+#wrap{display: flex; flex-direction: column; min-height: 100vh;}
 
 /* 공통 */
 .mb-10{margin-bottom: 10px!important;}
