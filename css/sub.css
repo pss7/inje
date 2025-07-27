@@ -1,17 +1,21 @@
 @charset "UTF-8";
 
+#wrap{display: flex; flex-direction: column;}
+/* html, body, #wrap{height: 100%;} */
+
 /* 공통 */
 .mb-10{margin-bottom: 10px!important;}
 .mb-20{margin-bottom: 20px!important;}
 .mt-10{margin-top: 10px!important;}
 .text-center{text-align: center!important;}
-#sub{padding: 90px 0 0 90px;}
-.contentWrap{flex: 1;}
+#sub{height: auto; flex: 1; padding: 90px 0 0 90px;}
+.contentWrap{padding: 50px 20px; height: 100%; display: flex; justify-content: center; align-items: center; flex: 1;}
+.contentWrap .container{width: 100%;}
 
 @media (max-width: 1199px){
 
-    #headerWrap{position: absolute;}
-    #sub{padding: 58px 0 0;}
+  #headerWrap{position: absolute;}
+  #sub{padding: 58px 0 0;}
 
 }
 
@@ -43,10 +47,10 @@
 .fileBox{padding: 18px 20px; width: 100%; display: flex; align-items: center; justify-content: space-between; border: 1px solid #ccc; border-radius: 5px;} 
 .fileBox .titleBox{margin: 0!important;}
 .fileBox .fileLabel{ padding-left: 10px; display: flex; justify-self: flex-end; align-items: center; gap: 0 7px; width: 58px; height: 26px; line-height: 26px; border: 1px solid #A7B0E9; border-radius: 5px; background-color: #F9FBFF; font-size: 12px; color: #000; font-weight: 500; cursor: pointer;}
-.fileBox .fileLabel::before{content: ''; width: 12px; height: 11px; background: url(../images/sub/plus_icon.svg)no-repeat center;}
-.fileBox .fileName{display: block; margin-top: 5px; font-size: 14px; color: #000; font-weight: 500;}
+.fileBox .fileLabel::before{content:enter;}
+.fileBox .fileName{display: b ''; width: 12px; height: 11px; background: url(../images/sub/plus_icon.svg)no-repeat clock; margin-top: 5px; font-size: 14px; color: #000; font-weight: 500;}
 .requiredInput{color: #E82626;}
-.contentBox{position: relative; width: 50%; max-height: 80vh; margin: 0 auto; padding: 90px 60px; background-color: rgba(255,255,255, .9); border-radius: 15px; z-index: 1; overflow: hidden;}
+.contentBox{position: relative; width: 70%; max-height: 80vh; margin: 0 auto; padding: 90px 60px; background-color: rgba(255,255,255, .9); border-radius: 15px; z-index: 1; overflow: hidden;}
 .titleBox {margin-bottom: 60px;}
 .titleBox .title{margin-bottom: 26px; font-size: 42px; font-weight: 700; color: #000; line-height: 1.4;}
 .titleBox .subText01{display: block; margin-bottom: 3px; font-weight: 700; color: #000;}
@@ -72,7 +76,7 @@
 @media (max-width: 1199px){
 
 
-  .contentBox{ width: 90%; border-radius: 7px;}
+  .contentBox{ width: 100%; border-radius: 7px;}
 
 }
 
@@ -124,7 +128,7 @@
 
 @media (max-width: 480px){
 
-  .contentWrap{padding: 50px 0;}
+  .contentWrap{padding: 50px 20px;}
   .contentBox{padding: 40px 30px;}
   .titleBox .title{font-size: 23px;}
 
@@ -217,55 +221,61 @@
 }
 
 /* 장학증서 */
-.scholarshipBox{width:53.13vw; margin: 0 auto; position: relative; padding: 2.34vw; font-family: 'KoPubWorld'; border-radius: 0;  background-color: #fff; z-index: 1;}
-.scholarshipBox::after{content: ''; width: 31.25vw; height: 31.25vw; position: absolute; left: 50%; transform: translateX(-50%); top:22.86vw; background: url(../images/sub/scholarship_img02.png)no-repeat center; background-size: contain; z-index: -1;}
-.scholarshipBox .box01{border: 0.21vw solid #e7b92b;}
-.scholarshipBox .box02{padding: 0 0 4.17vw; margin: 0.36vw; border: 0.10vw solid #e7b92b;}
+.scholarshipBox{position: relative; max-width: 672px; width: 100%; height: 100%; margin: 0 auto; padding: 33px; font-family: 'KoPubWorld'; border-radius: 0; background-color: #fff;
+z-index: 1;}
+.scholarshipBox::after{content: ''; width: 307px; height: 384px; position: absolute;
+    left: 50%; transform: translateX(-50%); top: 250px; background: url(../images/sub/scholarship_img02.png) no-repeat center; background-size: contain; z-index: -1;}
+.scholarshipBox .box01{height: 100%; padding: 6px; border: 4px solid #e7b92b;}
+.scholarshipBox .box02{height: 100%; padding: 0 0 48px; border: 2px solid #e7b92b;}
 .scholarshipBox .imgBox img{position: relative; display: block; width: 100%;}
-.scholarshipBox .imgBox .zoomView{display: none; position: absolute; bottom: 1.04vw; right: 1.04vw; width: 2.19vw; height: 2.19vw; background: url(../images/common/zoomView.png) no-repeat; background-size: 2.19vw 2.19vw;}
-.scholarshipBox .logoBox{margin-bottom: 6.77vw; padding: 1.56vw 0 0 1.98vw; display: flex; align-items: center; gap: 0 1.04vw;}
-.scholarshipBox .logoBox img{display: block; width: 6.25vw;}
-.scholarshipBox .logoBox span{margin-top: 0.21vw; font-weight: 700; font-size: 0.83vw;}
-.scholarshipBox .title{margin-bottom: 2.60vw; text-align: center; font-size: 3.13vw; color: #000;}
-.scholarshipBox .infoListBox{margin-right: 1.98vw; margin-bottom: 7.81vw; text-align: right;}
+.scholarshipBox .imgBox .zoomView{display: none; position: absolute; bottom: 20px; right: 20px; width: 42px; height: 42px; background: url(../images/common/zoomView.png) no-repeat; background-size: 42px 42px;}
+.scholarshipBox .logoBox{margin-bottom: 38px; padding: 21px 0 0 21px;
+    display: flex; align-items: center; gap: 0 10px;}
+.scholarshipBox .logoBox img{display: block; width: 120px;}
+.scholarshipBox .logoBox span{font-weight: 700; font-size: 13px; margin-top: -4px;}
+.scholarshipBox .title{margin-bottom: 58px; text-align: center; font-size: 33px; color: #000;}
+.scholarshipBox .infoListBox{margin-right: 19px; margin-bottom: 77px; text-align: right;}
 .scholarshipBox .infoList{display: inline-block;}
-.scholarshipBox .infoList li{margin-bottom: 1.04vw; display: flex; align-items: center;}
+.scholarshipBox .infoList li{margin-bottom: 12px; display: flex; align-items: center;}
 .scholarshipBox .infoList li:last-child{margin-bottom: 0;}
-.scholarshipBox .infoList li span{flex-shrink: 0; width: 9.38vw; font-weight: 500; font-size: 1.35vw; color: #212121;  white-space: nowrap; text-align: left;}
-.scholarshipBox .infoList li em{font-weight: 700; font-size: 1.35vw; color: #212121; text-align: left;}
-.scholarshipBox .infoList li.field span{letter-spacing: 0.68vw;}
-.scholarshipBox .infoList li.name span{letter-spacing: 4.69vw; }
-.scholarshipBox .text{margin-bottom: 11.56vw; font-size: 1.77vw; color: #212121; text-align: center; line-height: 2; font-weight: 700;}
-.scholarshipBox .leaderBox{display: flex; justify-content: center; align-items: center; gap: 0 1.56vw;}
-.scholarshipBox .leaderBox .date{display: block; margin-bottom: 1.04vw; font-weight: 500; color: #212121; font-size: 1.35vw;}
-.scholarshipBox .leaderBox h1{font-size: 2.40vw; letter-spacing: 0.73vw;}
-.scholarshipBox .leaderBox .sealBox{width: 7.81vw; height: 7.81vw;}
+.scholarshipBox .infoList li span{flex-shrink: 0; width: 102px; font-weight: 500;
+    font-size: 15px; color: #212121; white-space: nowrap; text-align: left;}
+.scholarshipBox .infoList li em{font-weight: 700; font-size: 15px; color: #212121;
+    text-align: left;}
+.scholarshipBox .infoList li.field span{letter-spacing: 8px;}
+.scholarshipBox .infoList li.name span{letter-spacing: 52px; }
+.scholarshipBox .text{margin-bottom: 134px; font-size: 19px;
+    color: #212121; text-align: center; line-height: 2; font-weight: 700;}
+.scholarshipBox .leaderBox{display: flex; justify-content: center; align-items: center; gap: 0 10px;}
+.scholarshipBox .leaderBox .date{display: block; margin-bottom: 8px;
+    font-weight: 500; color: #212121; font-size: 16px;}
+.scholarshipBox .leaderBox h1{font-size: 23px; letter-spacing: 14px;}
+.scholarshipBox .leaderBox .sealBox{width: 77px; height: 77px;}
 .scholarshipBox .leaderBox .sealBox img{display: block; width: 100%; height: 100%; object-fit: contain;}
 
-@media (max-width: 1024px){
+/* @media (max-width: 1024px){
 
 
-  .scholarshipBox .box02{padding: 0 0 8.5vw;}
-  .scholarshipBox{width: 90vw;}
-  .scholarshipBox .logoBox img{width: 9vw;}
-  .scholarshipBox .title{font-size: 5.5vw;}
-  .scholarshipBox .logoBox span{font-size: 2vw;}
+  .scholarshipBox .box02{padding: 0 0 163px;}
+  .scholarshipBox .logoBox img{width: 173px;}
+  .scholarshipBox .title{font-size: 106px;}
+  .scholarshipBox .logoBox span{font-size: 38px;}
   .scholarshipBox .infoList li em,
-  .scholarshipBox .infoList li span{font-size: 2vw;}
-  .scholarshipBox .infoList li span{width: 13vw;}
-  .scholarshipBox .infoList li.name span{letter-spacing: 6.5vw;}
-  .scholarshipBox .infoList li.field span{letter-spacing: 1vw;}
-  .scholarshipBox .text{font-size: 3.5vw;}
-  .scholarshipBox .title{margin-bottom: 4.5vw;}
-  .scholarshipBox .leaderBox .date{font-size: 2vw;}
-  .scholarshipBox .leaderBox h1{font-size: 3.8vw;}
-  .scholarshipBox .leaderBox .sealBox{width: 11vw; height: 11vw;}
-  .scholarshipBox .text{margin-bottom: 19vw;}
-  .scholarshipBox::after{top: 30vw; width: 50vw; height: 50vw;}
+  .scholarshipBox .infoList li span{font-size: 38px;}
+  .scholarshipBox .infoList li span{width: 250px;}
+  .scholarshipBox .infoList li.name span{letter-spacing: 125px;}
+  .scholarshipBox .infoList li.field span{letter-spacing: 19px;}
+  .scholarshipBox .text{font-size: 67px;}
+  .scholarshipBox .title{margin-bottom: 86px;}
+  .scholarshipBox .leaderBox .date{font-size: 38px;}
+  .scholarshipBox .leaderBox h1{font-size: 73px;}
+  .scholarshipBox .leaderBox .sealBox{width: 211px; height: 211px;}
+  .scholarshipBox .text{margin-bottom: 365px;}
+  .scholarshipBox::after{top: 576px; width: 960px; height: 960px;}
   
-}
+} */
 
-@media (max-width: 576px){
+/* @media (max-width: 576px){
 
   .scholarshipBox .logoBox span{margin-top: 0.7vw;}
 
@@ -283,5 +293,40 @@
   .scholarshipBox .leaderBox .date{font-size: 2.3vw;}
   .scholarshipBox .leaderBox h1{font-size: 4.5vw;}
   .scholarshipBox .leaderBox .sealBox{width: 13vw; height: 13vw;}
+
+} */
+@media (max-width: 576px){
+
+  .scholarshipBox{position: relative; max-width: 116.67vw; width: 100%; height: 100%; margin: 0 auto; padding: 5.73vw; font-family: 'KoPubWorld'; border-radius: 0; background-color: #fff;
+z-index: 1;}
+.scholarshipBox::after{content: ''; width: 53.30vw; height: 66.67vw; position: absolute;
+    left: 50%; transform: translateX(-50%); top: 43.40vw; background: url(../images/sub/scholarship_img02.png) no-repeat center; background-size: contain; z-index: -1;}
+.scholarshipBox .box01{height: 100%; padding: 1.04vw; border: 0.69vw solid #e7b92b;}
+.scholarshipBox .box02{height: 100%; padding: 0 0 5vw; border: 0.35vw solid #e7b92b;}
+.scholarshipBox .imgBox img{position: relative; display: block; width: 100%;}
+.scholarshipBox .imgBox .zoomView{display: none; position: absolute; bottom: 3.47vw; right: 3.47vw; width: 7.29vw; height: 7.29vw; background: url(../images/common/zoomView.png) no-repeat; background-size: 7.29vw 7.29vw;}
+.scholarshipBox .logoBox{margin-bottom: 6.60vw; padding: 3.65vw 0 0 3.65vw;
+    display: flex; align-items: center; gap: 0 1.74vw;}
+.scholarshipBox .logoBox img{display: block; width: 20.83vw;}
+.scholarshipBox .logoBox span{font-weight: 700; font-size: 2.26vw; margin-top: 0.7vw;}
+.scholarshipBox .title{margin-bottom: 10.07vw; text-align: center; font-size: 5.73vw; color: #000;}
+.scholarshipBox .infoListBox{margin-right: 3.30vw; margin-bottom: 13.37vw; text-align: right;}
+.scholarshipBox .infoList{display: inline-block;}
+.scholarshipBox .infoList li{margin-bottom: 2.08vw; display: flex; align-items: center;}
+.scholarshipBox .infoList li:last-child{margin-bottom: 0;}
+.scholarshipBox .infoList li span{flex-shrink: 0; width: 17.71vw; font-weight: 500;
+    font-size: 2.60vw; color: #212121; white-space: nowrap; text-align: left;}
+.scholarshipBox .infoList li em{font-weight: 700; font-size: 2.60vw; color: #212121;
+    text-align: left;}
+.scholarshipBox .infoList li.field span{letter-spacing: 1.39vw;}
+.scholarshipBox .infoList li.name span{letter-spacing: 9.03vw; }
+.scholarshipBox .text{margin-bottom: 23.26vw; font-size: 3.30vw;
+    color: #212121; text-align: center; line-height: 2; font-weight: 700;}
+.scholarshipBox .leaderBox{display: flex; justify-content: center; align-items: center; gap: 0 1.74vw;}
+.scholarshipBox .leaderBox .date{display: block; margin-bottom: 1.39vw;
+    font-weight: 500; color: #212121; font-size: 2.78vw;}
+.scholarshipBox .leaderBox h1{font-size: 3.99vw; letter-spacing: 2.43vw;}
+.scholarshipBox .leaderBox .sealBox{width: 13.37vw; height: 13.37vw;}
+.scholarshipBox .leaderBox .sealBox img{display: block; width: 100%; height: 100%; object-fit: contain;}
 
 }
