@@ -1,15 +1,20 @@
 @charset "UTF-8";
 
 html, body{height: 100%;}
-#wrap{display: flex; flex-direction: column; min-height: 100vh;}
+#wrap{display: flex; flex-direction: column; min-height: 100%;}
+
+/* .contentWrap .container,
+.contentBox,
+.scholarshipApplicationBox,
+.dormitoryApplicationBox{max-height: 100%;} */
 
 /* 공통 */
 .mb-10{margin-bottom: 10px!important;}
 .mb-20{margin-bottom: 20px!important;}
 .mt-10{margin-top: 10px!important;}
 .text-center{text-align: center!important;}
-#sub{height: auto; flex: 1; padding: 90px 0 0 90px;}
-.contentWrap{padding: 50px 20px; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; flex: 1;}
+#sub{padding: 90px 0 0 90px;}
+.contentWrap{display: flex; align-items: center; justify-content: center; padding: 50px 20px; width: 100%; height: 100%;}
 .contentWrap .container{width: 100%;}
 
 @media (max-width: 1199px){
@@ -25,8 +30,18 @@ html, body{height: 100%;}
 
 }
 
+@media (max-width: 480px){
+  
+  .contentWrap{padding: 50px 20px;}
+  
+  .infoInputbox{height: calc(100vh - 463px);} 
+
+}
+
 @media (max-width: 414px){
 
+  .contentWrap{background-size: contain;}
+  
   #sub{padding: 48px 0 0;}
 
 }
@@ -55,12 +70,12 @@ html, body{height: 100%;}
 .fileBox .fileLabel{padding-left: 10px; display: flex; justify-self: flex-end; align-items: center; gap: 0 7px; width: 58px; height: 26px; line-height: 26px; border: 1px solid #A7B0E9; border-radius: 5px; background-color: #F9FBFF; font-size: 12px; color: #000; font-weight: 500; cursor: pointer;}
 .fileBox .fileLabel::before{content:""; width: 12px; height: 11px; background: url(../images/sub/plus_icon.svg)no-repeat center;}
 .requiredInput{color: #E82626;}
-.contentBox{position: relative; width: 70%; max-height: 80vh; margin: 0 auto; padding: 50px; background-color: rgba(255,255,255, .9); border-radius: 15px; z-index: 1; overflow: hidden;}
+.contentBox{position: relative; width: 70%; margin: 0 auto; padding: 50px; background-color: rgba(255,255,255, .9); border-radius: 15px; z-index: 1; overflow: hidden;}
 .titleBox {margin-bottom: 60px;}
 .titleBox .title{margin-bottom: 26px; font-size: 42px; font-weight: 700; color: #000; line-height: 1.4;}
 .titleBox .subText01{display: block; margin-bottom: 3px; font-weight: 700; color: #000;}
 .titleBox .subText02{display: block; font-size: 14px; color: #7e7e7e;}
-.infoInputbox{position: relative; padding-right: 25px; padding-bottom: 50px; height: 39vh; overflow-y: auto;}
+.infoInputbox{position: relative; height: calc(100vh - 522px); padding-right: 25px; padding-bottom: 50px; overflow-y: auto;}
 .infoInputbox h4{margin-bottom: 20px;}
 .infoInputbox h4 span{margin-top: -2px; width: 20px; height: 20px; font-weight: 700; color: #fff; background-color: #0FC1BF; border-radius: 50px; text-align: center; font-size: 14px;}
 .infoInputbox h4{padding-bottom: 8px; display: flex; align-items: center; gap: 0 5px; border-bottom: 1px solid #000; font-size: 19px; color: #000; font-weight: 700;}
@@ -80,26 +95,73 @@ html, body{height: 100%;}
 
 @media (max-width: 1199px){
 
-  .infoInputbox{padding-bottom: 30px;}
   .contentBox{ width: 100%; border-radius: 7px;}
+
+  .infoInputbox{padding-bottom: 30px;}
 
 }
 
 @media (max-width: 1024px){
 
   .contentBox{padding: 30px 20px;}
-    
+
+  .infoInputbox{height: calc(100vh - 413px);}
+  
 }
 
 @media (max-width: 767px){
 
   .selectBox .selectList{top: 45px;}
 
+  .infoInputbox{height: calc(100vh - 427px);}
+
+  .btnBox .btn{margin: 50px auto 0;}
+
+}
+
+@media (max-width: 480px){
+  
+
+  .infoInputbox{height: calc(100vh - 463px);} 
+
 }
 
 @media (max-width: 414px){
 
-  .contentWrap{background-size: contain;}
+  .infoInputbox{height: calc(100vh - 453px);} 
+
+}
+
+/* 장학금신청 */
+.scholarshipApplicationBox .infoInputbox{height: calc(100vh - 433px);}
+
+@media (max-width: 1199px){
+
+  .scholarshipApplicationBox .infoInputbox{height: calc(100vh - 401px);}
+
+}
+
+@media (max-width: 1024px){
+
+  .scholarshipApplicationBox .infoInputbox{height: calc(100vh - 304px);}
+
+}
+
+@media (max-width: 767px){
+
+  .scholarshipApplicationBox .infoInputbox{height: calc(100vh - 288px);}
+
+}
+
+@media (max-width: 480px){
+
+  .scholarshipApplicationBox .infoInputbox{height: calc(100vh - 324px);}
+
+}
+
+@media (max-width: 414px){
+
+  .scholarshipApplicationBox .infoInputbox{height: calc(100vh - 314px);}
 
 }
 
@@ -138,7 +200,6 @@ html, body{height: 100%;}
 
 @media (max-width: 480px){
 
-  .contentWrap{padding: 50px 20px;}
   .titleBox .title{font-size: 23px;}
 
 }
@@ -150,6 +211,7 @@ html, body{height: 100%;}
 .tab li .tabBtn{display: block; width: 100%; height: 34px; border-radius: 7px; background-color: #fff; color: #B5B5B5; font-weight: 500; font-size: 13px;}
 .tab li .tabBtn.active{background-color: #343434; color: #fff;}
 .viewListBox h4{padding-bottom: 5px; color: #000; font-weight: 700; border-bottom: 1px solid #000;}
+.viewListBox .viewList{overflow-y: auto; max-height: calc(100vh - 646px);}
 .viewListBox .viewList > li{padding: 22px 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #000;}
 .viewListBox .viewList li .textBox h5{margin-bottom: 10px; color: #000; font-size: 18px; font-weight: 600;}
 .viewListBox .viewList li .textBox .list li{line-height: 1.3;}
@@ -157,12 +219,31 @@ html, body{height: 100%;}
 .viewListBox .viewList li .textBox .list li em{font-size: 14px; color: #333;}
 .viewListBox .viewList li .stateBox .state01{margin-bottom: 10px; display: block; font-size: 18px; font-weight: 600; color: #000;}
 .viewListBox .viewList li .stateBox .state02{display: block; width: 49px; height: 24px; line-height: 24px; border-radius: 5px; text-align: center; background-color: #FFF3F3; color: #AD6767; font-size: 12px; font-weight: 500;} 
+.tableBox{max-height: calc(100vh - 652px); overflow-y: auto;}
 .table{width: 100%;}
 .table thead tr th{padding: 12px 10px; height: 43px;  border-bottom: 1px solid #e4e4e4; font-size: 14px; color: #000; text-align: center; font-weight: 400;}
 .table tbody tr td{padding: 12px 10px; height: 43px; font-size: 14px; font-weight: 500; color: #000; text-align: center;}
 
+@media (max-width: 1199px){
+
+  .viewListBox .viewList{max-height: calc(100vh - 616px);}
+
+  .tableBox{max-height: calc(100vh - 626px);}
+
+}
+
+@media (max-width: 1024px){
+
+  .viewListBox .viewList{max-height: calc(100vh - 535px);}
+
+  .tableBox{max-height: calc(100vh - 523px);}
+
+}
+
 @media (max-width: 767px){
 
+   .tableBox{max-height: calc(100vh - 447px);}
+  .viewListBox .viewList{max-height: calc(100vh - 453px);}
   .viewListBox .viewList > li{padding: 22px 20px; flex-direction: column; gap: 40px 0; text-align: center;}
   .viewListBox .viewList li .stateBox .state02{margin: 0 auto;}
 
@@ -170,7 +251,9 @@ html, body{height: 100%;}
 
 @media (max-width: 480px){
 
-  .tableBox{overflow-x: auto;}
+  .viewListBox .viewList{max-height: calc(100vh - 519px);}
+
+  .tableBox{max-height: calc(100vh - 517px); overflow-x: auto;}
   .tableBox .table{width: 480px;}
 
   .tab{width: 100%; flex-direction: column; gap: 7px 0; margin: 0 auto 32px;}
@@ -178,7 +261,10 @@ html, body{height: 100%;}
 }
 
 /* 개인정보 수집·이용 동의 */
-.certificationBox .orderBox{text-align: center; margin-bottom: 45px;}
+.certificationBox .titleBox{margin-bottom: 28px;}
+.certificationBox .btnBox .btn{margin: 23px auto 0;}
+.certificationBox .titleBox .title{margin-bottom: 26px;}
+.certificationBox .orderBox{text-align: center; margin-bottom: 20px;}
 .certificationBox .orederList{position: relative; gap: 0 25px; display: inline-flex; align-items: center; justify-content: center; z-index: 1;}
 .certificationBox .orederList::before{content: ''; position: absolute; top: 50%; transform: translateY(-50%); left:0; right:0; height: 1px; background-color: #ddd; z-index: -1;}
 .certificationBox .orederList li{width: 35px; height: 35px; line-height: 35px; border-radius: 50px; background-color: #ddd; text-align: center; font-size: 18px; font-weight: 500;}
@@ -186,7 +272,7 @@ html, body{height: 100%;}
 .certificationBox .logoBox{position: absolute; top:40px; left:30px; margin-bottom: 40px; text-align: center;}
 .certificationBox .logoBox img{display: block; margin: 0 auto 10px}
 .certificationBox .logoBox span{display: block; color: #333; font-size: 20px; font-weight: 500; font-family: 'Recipekorea';}
-.certificationBox .infoTextBox{margin-bottom: 30px; height: 410px; padding: 30px; background-color: #f9f9f9; border-radius: 15px; overflow-y: auto; box-shadow: 5px 5px 18px rgba(0, 0, 0, .1);}
+.certificationBox .infoTextBox{margin-bottom: 30px; height: 379px; padding: 30px; background-color: #f9f9f9; border-radius: 15px; overflow-y: auto; box-shadow: 5px 5px 18px rgba(0, 0, 0, .1);}
 .certificationBox .infoTextBox .box{margin-bottom: 30px;}
 .certificationBox .infoTextBox .box:last-child{margin-bottom: 0;}
 .certificationBox .infoTextBox h4{margin-bottom: 5px; color: #333; }
@@ -199,8 +285,7 @@ html, body{height: 100%;}
 
 @media (max-width: 1199px){
 
-  .certificationBox{padding: 100px 0 0;}
-  .certificationBox .infoTextBox{padding: 25px 20px; height: 390px;}
+  .certificationBox .infoTextBox{padding: 25px 20px; height: 390px; border-radius: 10px;}
   .certificationBox .infoTextBox .box{margin-bottom: 15px;}
   .certificationBox .logoBox span{font-size: 18px;}
   .certificationBox label{font-size: 16px;}
@@ -210,7 +295,7 @@ html, body{height: 100%;}
 
 @media (max-width: 1024px){
 
-  .certificationBox{padding: 72px 0 0;}
+
   .certificationBox .orderBox{margin-bottom:33px;}
   .certificationBox .logoBox img{width: 85px;}
   .certificationBox .logoBox span{font-size: 16px;}
@@ -220,7 +305,7 @@ html, body{height: 100%;}
 @media (max-width: 480px){
 
   .certificationBox .logoBox span{font-size: 14px;}
-  .certificationBox{padding: 90px 0 0;}
+
   .certificationBox .infoTextBox{height: 366px;}
   .certificationBox .infoTextBox h4,
   .certificationBox .infoTextBox .list li,
@@ -261,48 +346,6 @@ z-index: 1;}
 .scholarshipBox .leaderBox .sealBox{width: 77px; height: 77px;}
 .scholarshipBox .leaderBox .sealBox img{display: block; width: 100%; height: 100%; object-fit: contain;}
 
-/* @media (max-width: 1024px){
-
-
-  .scholarshipBox .box02{padding: 0 0 163px;}
-  .scholarshipBox .logoBox img{width: 173px;}
-  .scholarshipBox .title{font-size: 106px;}
-  .scholarshipBox .logoBox span{font-size: 38px;}
-  .scholarshipBox .infoList li em,
-  .scholarshipBox .infoList li span{font-size: 38px;}
-  .scholarshipBox .infoList li span{width: 250px;}
-  .scholarshipBox .infoList li.name span{letter-spacing: 125px;}
-  .scholarshipBox .infoList li.field span{letter-spacing: 19px;}
-  .scholarshipBox .text{font-size: 67px;}
-  .scholarshipBox .title{margin-bottom: 86px;}
-  .scholarshipBox .leaderBox .date{font-size: 38px;}
-  .scholarshipBox .leaderBox h1{font-size: 73px;}
-  .scholarshipBox .leaderBox .sealBox{width: 211px; height: 211px;}
-  .scholarshipBox .text{margin-bottom: 365px;}
-  .scholarshipBox::after{top: 576px; width: 960px; height: 960px;}
-  
-} */
-
-/* @media (max-width: 576px){
-
-  .scholarshipBox .logoBox span{margin-top: 0.7vw;}
-
-}
-
-@media (max-width: 480px){
-
-  .scholarshipBox .box02{padding: 0 0 9.5vw;}
-  .scholarshipBox .logoBox img{width: 13.5vw;}
-  .scholarshipBox .logoBox span{font-size: 2.5vw;}
-  .scholarshipBox .title{font-size: 6vw; }
-  .scholarshipBox .infoList li em,
-  .scholarshipBox .infoList li span{font-size: 2.5vw;}
-  .scholarshipBox .infoList li span{width: 19vw;}
-  .scholarshipBox .leaderBox .date{font-size: 2.3vw;}
-  .scholarshipBox .leaderBox h1{font-size: 4.5vw;}
-  .scholarshipBox .leaderBox .sealBox{width: 13vw; height: 13vw;}
-
-} */
 @media (max-width: 576px){
 
   .scholarshipBox{position: relative; max-width: 116.67vw; width: 100%; height: 100%; margin: 0 auto; padding: 5.73vw; font-family: 'KoPubWorld'; border-radius: 0; background-color: #fff;
@@ -338,3 +381,5 @@ z-index: 1;}
 .scholarshipBox .leaderBox .sealBox img{display: block; width: 100%; height: 100%; object-fit: contain;}
 
 }
+
+
