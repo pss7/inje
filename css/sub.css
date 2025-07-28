@@ -261,7 +261,7 @@ html, body{height: 100%;}
 .certificationBox .logoBox{position: absolute; top:40px; left:30px; margin-bottom: 40px; text-align: center;}
 .certificationBox .logoBox img{display: block; margin: 0 auto 10px}
 .certificationBox .logoBox span{display: block; color: #333; font-size: 20px; font-weight: 500; font-family: 'Recipekorea';}
-.certificationBox .infoTextBox{margin-bottom: 30px; height: 379px; padding: 30px; background-color: #f9f9f9; border-radius: 15px; overflow-y: auto; box-shadow: 5px 5px 18px rgba(0, 0, 0, .1);}
+.certificationBox .infoTextBox{margin-bottom: 30px; height: calc(100vh - 568px); padding: 30px; background-color: #f9f9f9; border-radius: 15px; overflow-y: auto; box-shadow: 5px 5px 18px rgba(0, 0, 0, .1);}
 .certificationBox .infoTextBox .box{margin-bottom: 30px;}
 .certificationBox .infoTextBox .box:last-child{margin-bottom: 0;}
 .certificationBox .infoTextBox h4{margin-bottom: 5px; color: #333; }
@@ -274,7 +274,7 @@ html, body{height: 100%;}
 
 @media (max-width: 1199px){
 
-  .certificationBox .infoTextBox{padding: 25px 20px; height: 390px; border-radius: 10px;}
+  .certificationBox .infoTextBox{padding: 25px 20px; height: calc(100vh - 530px); border-radius: 10px;}
   .certificationBox .infoTextBox .box{margin-bottom: 15px;}
   .certificationBox .logoBox span{font-size: 18px;}
   .certificationBox label{font-size: 16px;}
@@ -284,18 +284,23 @@ html, body{height: 100%;}
 
 @media (max-width: 1024px){
 
-
+  .certificationBox .infoTextBox{height: calc(100vh - 444px);}
   .certificationBox .orderBox{margin-bottom:33px;}
   .certificationBox .logoBox img{width: 85px;}
   .certificationBox .logoBox span{font-size: 16px;}
 
 }
 
+@media (max-width: 767px){
+
+  .certificationBox .infoTextBox{height: calc(100vh - 434px);}
+
+}
+
 @media (max-width: 480px){
 
   .certificationBox .logoBox span{font-size: 14px;}
-
-  .certificationBox .infoTextBox{height: 366px;}
+  .certificationBox .infoTextBox{height: calc(100vh - 469px);}
   .certificationBox .infoTextBox h4,
   .certificationBox .infoTextBox .list li,
   .certificationBox .infoTextBox p{font-size: 14px;}
