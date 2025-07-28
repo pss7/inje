@@ -3,10 +3,10 @@
 html, body{height: 100%;}
 #wrap{display: flex; flex-direction: column; min-height: 100%;}
 
-/* .contentWrap .container,
+.contentWrap .container,
 .contentBox,
 .scholarshipApplicationBox,
-.dormitoryApplicationBox{max-height: 100%;} */
+.dormitoryApplicationBox{max-height: 100%;}
 
 /* 공통 */
 .mb-10{margin-bottom: 10px!important;}
@@ -75,7 +75,7 @@ html, body{height: 100%;}
 .titleBox .title{margin-bottom: 26px; font-size: 42px; font-weight: 700; color: #000; line-height: 1.4;}
 .titleBox .subText01{display: block; margin-bottom: 3px; font-weight: 700; color: #000;}
 .titleBox .subText02{display: block; font-size: 14px; color: #7e7e7e;}
-.infoInputbox{position: relative; height: calc(100vh - 522px); padding-right: 25px; padding-bottom: 50px; overflow-y: auto;}
+.infoInputbox{position: relative; padding-right: 25px; padding-bottom: 50px; overflow-y: auto;}
 .infoInputbox h4{margin-bottom: 20px;}
 .infoInputbox h4 span{margin-top: -2px; width: 20px; height: 20px; font-weight: 700; color: #fff; background-color: #0FC1BF; border-radius: 50px; text-align: center; font-size: 14px;}
 .infoInputbox h4{padding-bottom: 8px; display: flex; align-items: center; gap: 0 5px; border-bottom: 1px solid #000; font-size: 19px; color: #000; font-weight: 700;}
@@ -104,8 +104,6 @@ html, body{height: 100%;}
 @media (max-width: 1024px){
 
   .contentBox{padding: 30px 20px;}
-
-  .infoInputbox{height: calc(100vh - 413px);}
   
 }
 
@@ -113,55 +111,40 @@ html, body{height: 100%;}
 
   .selectBox .selectList{top: 45px;}
 
-  .infoInputbox{height: calc(100vh - 427px);}
-
   .btnBox .btn{margin: 50px auto 0;}
 
 }
 
-@media (max-width: 480px){
-  
-
-  .infoInputbox{height: calc(100vh - 463px);} 
-
-}
-
-@media (max-width: 414px){
-
-  .infoInputbox{height: calc(100vh - 453px);} 
-
-}
-
 /* 장학금신청 */
-.scholarshipApplicationBox .infoInputbox{height: calc(100vh - 433px);}
+.scholarshipApplicationBox .infoInputbox{height: calc(100vh - 486px);}
 
 @media (max-width: 1199px){
 
-  .scholarshipApplicationBox .infoInputbox{height: calc(100vh - 401px);}
+  .scholarshipApplicationBox .infoInputbox{height: calc(100vh - 452px);}
 
 }
 
 @media (max-width: 1024px){
 
-  .scholarshipApplicationBox .infoInputbox{height: calc(100vh - 304px);}
+  .scholarshipApplicationBox .infoInputbox{height: calc(100vh - 337px);}
 
 }
 
 @media (max-width: 767px){
 
-  .scholarshipApplicationBox .infoInputbox{height: calc(100vh - 288px);}
+  .scholarshipApplicationBox .infoInputbox{height: calc(100vh - 317px);}
 
 }
 
 @media (max-width: 480px){
 
-  .scholarshipApplicationBox .infoInputbox{height: calc(100vh - 324px);}
+  .scholarshipApplicationBox .infoInputbox{height: calc(100vh - 354px);}
 
 }
 
 @media (max-width: 414px){
 
-  .scholarshipApplicationBox .infoInputbox{height: calc(100vh - 314px);}
+  .scholarshipApplicationBox .infoInputbox{height: calc(100vh - 343px);}
 
 }
 
@@ -172,11 +155,20 @@ html, body{height: 100%;}
 .dormitoryApplicationBox .selectWrap h4{margin-bottom: 17px; text-align: center; font-weight: 700; color: #000;}
 .dormitoryApplicationBox .selectWrap .formBox{display: flex; flex-wrap: wrap; gap: 10px 5px;}
 .dormitoryApplicationBox .selectWrap .formBox .selectBox{width: 49.5%;}
+.dormitoryApplicationBox .infoInputbox{height: calc(100vh - 575px);}
+
+@media (max-width: 1199px){
+
+  .dormitoryApplicationBox .infoInputbox{height: calc(100vh - 541px);}
+
+}
 
 @media (max-width: 1024px){
 
   .titleBox{margin-bottom: 50px;}
   .titleBox .title{margin-bottom: 16px; font-size: 30px;}
+
+  .dormitoryApplicationBox .infoInputbox{height: calc(100vh - 445px);}
 
 }
 
@@ -192,6 +184,7 @@ html, body{height: 100%;}
 
   .dormitoryApplicationBox .selectWrap{margin-bottom: 35px; padding: 26px 20px;}
   .dormitoryApplicationBox .selectWrap .formBox .selectBox{width: 100%;}
+  .dormitoryApplicationBox .infoInputbox{height: calc(100vh - 458px);}
 
   .selectBox .selectBtn,
   .inpuTextBox input{height: 40px;}
@@ -201,6 +194,8 @@ html, body{height: 100%;}
 @media (max-width: 480px){
 
   .titleBox .title{font-size: 23px;}
+
+  .dormitoryApplicationBox .infoInputbox{height: calc(100vh - 493px);}
 
 }
 
