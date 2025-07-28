@@ -17,9 +17,16 @@ html, body{height: 100%;}
 .contentWrap{display: flex; align-items: center; justify-content: center; padding: 50px 20px; width: 100%; height: 100%;}
 .contentWrap .container{width: 100%;}
 
+@media (max-width: 1480px){
+
+  .contentBox{width: 80%;}
+
+}
+
 @media (max-width: 1199px){
 
   #headerWrap{position: absolute;}
+  .contentBox{ width: 100%; border-radius: 7px;}
   #sub{padding: 58px 0 0;}
 
 }
@@ -27,6 +34,7 @@ html, body{height: 100%;}
 @media (max-width: 1024px){
 
   .contentWrap{padding: 30px 20px;}
+  .contentBox{padding: 30px 20px;}
 
 }
 
@@ -87,24 +95,10 @@ html, body{height: 100%;}
 .btnBox .btn{display: block; width: 337px; height: 54px; line-height: 54px; margin: 100px auto 0; border-radius: 10px; background-color: #0FC1BF; color: #fff; text-align: center; font-size: 18px; font-weight: 600;}
 .btnBox .btn:disabled{background-color: #ddd; color: #fff; pointer-events: none;}
 
-@media (max-width: 1480px){
-
-  .contentBox{width: 80%;}
-
-}
-
 @media (max-width: 1199px){
-
-  .contentBox{ width: 100%; border-radius: 7px;}
 
   .infoInputbox{padding-bottom: 30px;}
 
-}
-
-@media (max-width: 1024px){
-
-  .contentBox{padding: 30px 20px;}
-  
 }
 
 @media (max-width: 767px){
@@ -309,7 +303,7 @@ html, body{height: 100%;}
 }
 
 /* 장학증서 */
-.scholarshipBox{position: relative; max-width: 672px; width: 100%; height: 100%; margin: 0 auto; padding: 33px; font-family: 'KoPubWorld'; border-radius: 0; background-color: #fff;
+.scholarshipBox{position: relative; max-width: 672px; width: 100%; height: 721px; margin: 0 auto; padding: 33px; font-family: 'KoPubWorld'; border-radius: 0; background-color: #fff;
 z-index: 1;}
 .scholarshipBox::after{content: ''; width: 307px; height: 384px; position: absolute;
     left: 50%; transform: translateX(-50%); top: 250px; background: url(../images/sub/scholarship_img02.png) no-repeat center; background-size: contain; z-index: -1;}
@@ -317,12 +311,11 @@ z-index: 1;}
 .scholarshipBox .box02{height: 100%; padding: 0 0 48px; border: 2px solid #e7b92b;}
 .scholarshipBox .imgBox img{position: relative; display: block; width: 100%;}
 .scholarshipBox .imgBox .zoomView{display: none; position: absolute; bottom: 20px; right: 20px; width: 42px; height: 42px; background: url(../images/common/zoomView.png) no-repeat; background-size: 42px 42px;}
-.scholarshipBox .logoBox{margin-bottom: 38px; padding: 21px 0 0 21px;
-    display: flex; align-items: center; gap: 0 10px;}
+.scholarshipBox .logoBox{margin-bottom: 38px; padding: 12px 0 0 19px; display: flex; align-items: center; gap: 0 10px;}
 .scholarshipBox .logoBox img{display: block; width: 120px;}
 .scholarshipBox .logoBox span{font-weight: 700; font-size: 13px; margin-top: -4px;}
 .scholarshipBox .title{margin-bottom: 58px; text-align: center; font-size: 33px; color: #000;}
-.scholarshipBox .infoListBox{margin-right: 19px; margin-bottom: 77px; text-align: right;}
+.scholarshipBox .infoListBox{margin-right: 19px; margin-bottom: 60px; text-align: right;}
 .scholarshipBox .infoList{display: inline-block;}
 .scholarshipBox .infoList li{margin-bottom: 12px; display: flex; align-items: center;}
 .scholarshipBox .infoList li:last-child{margin-bottom: 0;}
@@ -332,7 +325,7 @@ z-index: 1;}
     text-align: left;}
 .scholarshipBox .infoList li.field span{letter-spacing: 8px;}
 .scholarshipBox .infoList li.name span{letter-spacing: 52px; }
-.scholarshipBox .text{margin-bottom: 134px; font-size: 19px;
+.scholarshipBox .text{margin-bottom: 110px; font-size: 19px;
     color: #212121; text-align: center; line-height: 2; font-weight: 700;}
 .scholarshipBox .leaderBox{display: flex; justify-content: center; align-items: center; gap: 0 10px;}
 .scholarshipBox .leaderBox .date{display: block; margin-bottom: 8px;
@@ -343,37 +336,37 @@ z-index: 1;}
 
 @media (max-width: 576px){
 
-  .scholarshipBox{position: relative; max-width: 116.67vw; width: 100%; height: 100%; margin: 0 auto; padding: 5.73vw; font-family: 'KoPubWorld'; border-radius: 0; background-color: #fff;
+  .scholarshipBox{position: relative; max-width: 116.67vw; width: 100%; height: auto; margin: 0 auto; padding: 5.73vw; font-family: 'KoPubWorld'; border-radius: 0; background-color: #fff;
 z-index: 1;}
-.scholarshipBox::after{content: ''; width: 53.30vw; height: 66.67vw; position: absolute;
-    left: 50%; transform: translateX(-50%); top: 43.40vw; background: url(../images/sub/scholarship_img02.png) no-repeat center; background-size: contain; z-index: -1;}
-.scholarshipBox .box01{height: 100%; padding: 1.04vw; border: 0.69vw solid #e7b92b;}
-.scholarshipBox .box02{height: 100%; padding: 0 0 5vw; border: 0.35vw solid #e7b92b;}
-.scholarshipBox .imgBox img{position: relative; display: block; width: 100%;}
-.scholarshipBox .imgBox .zoomView{display: none; position: absolute; bottom: 3.47vw; right: 3.47vw; width: 7.29vw; height: 7.29vw; background: url(../images/common/zoomView.png) no-repeat; background-size: 7.29vw 7.29vw;}
-.scholarshipBox .logoBox{margin-bottom: 6.60vw; padding: 3.65vw 0 0 3.65vw;
-    display: flex; align-items: center; gap: 0 1.74vw;}
-.scholarshipBox .logoBox img{display: block; width: 20.83vw;}
-.scholarshipBox .logoBox span{font-weight: 700; font-size: 2.26vw; margin-top: 0.7vw;}
-.scholarshipBox .title{margin-bottom: 10.07vw; text-align: center; font-size: 5.73vw; color: #000;}
-.scholarshipBox .infoListBox{margin-right: 3.30vw; margin-bottom: 13.37vw; text-align: right;}
-.scholarshipBox .infoList{display: inline-block;}
-.scholarshipBox .infoList li{margin-bottom: 2.08vw; display: flex; align-items: center;}
-.scholarshipBox .infoList li:last-child{margin-bottom: 0;}
-.scholarshipBox .infoList li span{flex-shrink: 0; width: 17.71vw; font-weight: 500;
-    font-size: 2.60vw; color: #212121; white-space: nowrap; text-align: left;}
-.scholarshipBox .infoList li em{font-weight: 700; font-size: 2.60vw; color: #212121;
-    text-align: left;}
-.scholarshipBox .infoList li.field span{letter-spacing: 1.39vw;}
-.scholarshipBox .infoList li.name span{letter-spacing: 9.03vw; }
-.scholarshipBox .text{margin-bottom: 23.26vw; font-size: 3.30vw;
-    color: #212121; text-align: center; line-height: 2; font-weight: 700;}
-.scholarshipBox .leaderBox{display: flex; justify-content: center; align-items: center; gap: 0 1.74vw;}
-.scholarshipBox .leaderBox .date{display: block; margin-bottom: 1.39vw;
-    font-weight: 500; color: #212121; font-size: 2.78vw;}
-.scholarshipBox .leaderBox h1{font-size: 3.99vw; letter-spacing: 2.43vw;}
-.scholarshipBox .leaderBox .sealBox{width: 13.37vw; height: 13.37vw;}
-.scholarshipBox .leaderBox .sealBox img{display: block; width: 100%; height: 100%; object-fit: contain;}
+  .scholarshipBox::after{content: ''; width: 53.30vw; height: 66.67vw; position: absolute;
+      left: 50%; transform: translateX(-50%); top: 43.40vw; background: url(../images/sub/scholarship_img02.png) no-repeat center; background-size: contain; z-index: -1;}
+  .scholarshipBox .box01{height: 100%; padding: 1.04vw; border: 0.69vw solid #e7b92b;}
+  .scholarshipBox .box02{height: 100%; padding: 0 0 5vw; border: 0.35vw solid #e7b92b;}
+  .scholarshipBox .imgBox img{position: relative; display: block; width: 100%;}
+  .scholarshipBox .imgBox .zoomView{display: none; position: absolute; bottom: 3.47vw; right: 3.47vw; width: 7.29vw; height: 7.29vw; background: url(../images/common/zoomView.png) no-repeat; background-size: 7.29vw 7.29vw;}
+  .scholarshipBox .logoBox{margin-bottom: 6.60vw; padding: 3.65vw 0 0 3.65vw;
+      display: flex; align-items: center; gap: 0 1.74vw;}
+  .scholarshipBox .logoBox img{display: block; width: 20.83vw;}
+  .scholarshipBox .logoBox span{font-weight: 700; font-size: 2.26vw; margin-top: 0.7vw;}
+  .scholarshipBox .title{margin-bottom: 10.07vw; text-align: center; font-size: 5.73vw; color: #000;}
+  .scholarshipBox .infoListBox{margin-right: 3.30vw; margin-bottom: 13.37vw; text-align: right;}
+  .scholarshipBox .infoList{display: inline-block;}
+  .scholarshipBox .infoList li{margin-bottom: 2.08vw; display: flex; align-items: center;}
+  .scholarshipBox .infoList li:last-child{margin-bottom: 0;}
+  .scholarshipBox .infoList li span{flex-shrink: 0; width: 17.71vw; font-weight: 500;
+      font-size: 2.60vw; color: #212121; white-space: nowrap; text-align: left;}
+  .scholarshipBox .infoList li em{font-weight: 700; font-size: 2.60vw; color: #212121;
+      text-align: left;}
+  .scholarshipBox .infoList li.field span{letter-spacing: 1.39vw;}
+  .scholarshipBox .infoList li.name span{letter-spacing: 9.03vw; }
+  .scholarshipBox .text{margin-bottom: 23.26vw; font-size: 3.30vw;
+      color: #212121; text-align: center; line-height: 2; font-weight: 700;}
+  .scholarshipBox .leaderBox{display: flex; justify-content: center; align-items: center; gap: 0 1.74vw;}
+  .scholarshipBox .leaderBox .date{display: block; margin-bottom: 1.39vw;
+      font-weight: 500; color: #212121; font-size: 2.78vw;}
+  .scholarshipBox .leaderBox h1{font-size: 3.99vw; letter-spacing: 2.43vw;}
+  .scholarshipBox .leaderBox .sealBox{width: 13.37vw; height: 13.37vw;}
+  .scholarshipBox .leaderBox .sealBox img{display: block; width: 100%; height: 100%; object-fit: contain;}
 
 }
 
