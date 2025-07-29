@@ -3,20 +3,15 @@
 html, body{height: 100%;}
 #wrap{display: flex; flex-direction: column; min-height: 100%;}
 
-.contentWrap .container,
-.contentBox,
-.scholarshipApplicationBox,
-.dormitoryApplicationBox{max-height: 100%;}
-
 /* 공통 */
 .mb-10{margin-bottom: 10px!important;}
 .mb-20{margin-bottom: 20px!important;}
 .mt-10{margin-top: 10px!important;}
 .text-center{text-align: center!important;}
-#sub{padding: 90px 0 0 90px;}
+#sub{padding: 90px 0 0 90px; height: auto;}
 .contentWrap{display: flex; align-items: center; justify-content: center; padding: 50px 20px; width: 100%; height: 100%;}
 .contentWrap .container{width: 100%;}
-.contentBox{position: relative; width: 70%; margin: 0 auto; padding: 50px; background-color: rgba(255,255,255, .9); border-radius: 15px; z-index: 1; overflow: hidden;}
+.contentBox{position: relative; width: 70%; margin: 0 auto; padding: 50px; background-color: rgba(255,255,255, .9); border-radius: 15px; z-index: 1; overflow-x: hidden; overflow-y: auto;}
 
 @media (max-width: 1480px){
 
@@ -253,7 +248,7 @@ html, body{height: 100%;}
 .certificationBox .titleBox{margin-bottom: 15px;}
 .certificationBox .des{margin-bottom: 25px; font-size: 16px; color: #333; font-weight: 500;}
 .certificationBox .btnBox .btn{margin: 23px auto 0;}
-.certificationBox .titleBox .title{margin-bottom: 0;}
+.certificationBox .titleBox .title{margin-bottom: 0; font-size: 30px;}
 .certificationBox .orderBox{text-align: center; margin-bottom: 20px;}
 .certificationBox .orederList{position: relative; gap: 0 25px; display: inline-flex; align-items: center; justify-content: center; z-index: 1;}
 .certificationBox .orederList::before{content: ''; position: absolute; top: 50%; transform: translateY(-50%); left:0; right:0; height: 1px; background-color: #ddd; z-index: -1;}
@@ -262,15 +257,15 @@ html, body{height: 100%;}
 .certificationBox .logoBox{position: absolute; top:40px; left:30px; margin-bottom: 40px; text-align: center;}
 .certificationBox .logoBox img{display: block; margin: 0 auto 10px}
 .certificationBox .logoBox span{display: block; color: #333; font-size: 20px; font-weight: 500; font-family: 'Recipekorea';}
-.certificationBox .infoTextBox{margin-bottom: 30px; height: calc(100vh - 568px); padding: 30px; background-color: #f9f9f9; border-radius: 15px; overflow-y: auto; box-shadow: 5px 5px 18px rgba(0, 0, 0, .1);}
+.certificationBox .infoTextBox{margin-bottom: 30px; height: 277px; padding: 30px; background-color: #f9f9f9; border-radius: 15px; overflow-y: auto; box-shadow: 5px 5px 18px rgba(0, 0, 0, .1);}
 .certificationBox .infoTextBox .box{margin-bottom: 20px;}
 .certificationBox .infoTextBox .box:last-child{margin-bottom: 0;}
 .certificationBox .infoTextBox h4{margin-bottom: 5px; color: #333; }
 .certificationBox .infoTextBox .list li,
 .certificationBox .infoTextBox p{color: #333;}
 .certificationBox .infoTextBox h4{font-size: 20px;}
-.certificationBox .infoTextBox .list01 > li{position: relative; padding-left: 15px;}
-.certificationBox .infoTextBox .list01 > li::before{content: ''; position: absolute; top:12px; left: 0; width: 7px; height: 2px; background-color: #333;}
+.certificationBox .infoTextBox .list01 > li{position: relative; padding-left: 13px;}
+.certificationBox .infoTextBox .list01 > li::before{content: ''; position: absolute; top:10px; left: 0; width: 7px; height: 2px; background-color: #333;}
 .certificationBox .infoTextBox h5{font-size: 18px; color: #333; font-weight: 500;}
 .certificationBox .infoTextBox .list02{margin: 5px 0;}
 .certificationBox .infoTextBox .list02 > li{font-size: 16px;}
@@ -281,37 +276,36 @@ html, body{height: 100%;}
 
 @media (max-width: 1199px){
 
-  .certificationBox .infoTextBox{padding: 25px 20px; height: calc(100vh - 530px); border-radius: 10px;}
+  .certificationBox .infoTextBox{padding: 25px 20px; border-radius: 10px;}
   .certificationBox .infoTextBox .box{margin-bottom: 15px;}
-  .certificationBox .logoBox span{font-size: 18px;}
+
   .certificationBox label{font-size: 16px;}
   .certificationBox .inputCheckBox label::before{top: -3px;}
+
+  .certificationBox .infoTextBox h4{font-size: 18px;}
+  .certificationBox .titleBox .title{font-size: 28px;}
 
 }
 
 @media (max-width: 1024px){
 
-  .certificationBox .infoTextBox{height: calc(100vh - 444px);}
   .certificationBox .orderBox{margin-bottom:33px;}
-  .certificationBox .logoBox img{width: 85px;}
-  .certificationBox .logoBox span{font-size: 16px;}
+  .certificationBox .titleBox .title{font-size: 22px;}
 
 }
+
 
 @media (max-width: 767px){
 
-  .certificationBox .infoTextBox{height: calc(100vh - 434px);}
-
-}
-
-@media (max-width: 480px){
-
-  .certificationBox .logoBox span{font-size: 14px;}
-  .certificationBox .infoTextBox{height: calc(100vh - 469px);}
-  .certificationBox .infoTextBox h4,
-  .certificationBox .infoTextBox .list li,
-  .certificationBox .infoTextBox p{font-size: 14px;}
-
+  .certificationBox .infoTextBox{padding: 20px;}
+  .certificationBox .infoTextBox h4{font-size: 16px;}
+  .certificationBox .infoTextBox .list02 > li{font-size: 14px;}
+  .certificationBox .des{font-size: 14px;}
+  .certificationBox .inputCheckBox label{padding-left: 29px;}
+  .certificationBox .inputCheckBox label::before{top:-1px; width: 18px; height: 18px;}
+  .certificationBox .inputCheckBox input:checked + label::before{background-size: 13px; background-position: 3px 5px;}
+  .certificationBox .infoTextBox .list01 > li::before{top: 9px; height: 1px;}
+  
 }
 
 /* 장학증서 */
