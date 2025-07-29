@@ -250,9 +250,10 @@ html, body{height: 100%;}
 }
 
 /* 개인정보 수집·이용 동의 */
-.certificationBox .titleBox{margin-bottom: 28px;}
+.certificationBox .titleBox{margin-bottom: 15px;}
+.certificationBox .des{margin-bottom: 25px; font-size: 16px; color: #333; font-weight: 500;}
 .certificationBox .btnBox .btn{margin: 23px auto 0;}
-.certificationBox .titleBox .title{margin-bottom: 26px;}
+.certificationBox .titleBox .title{margin-bottom: 0;}
 .certificationBox .orderBox{text-align: center; margin-bottom: 20px;}
 .certificationBox .orederList{position: relative; gap: 0 25px; display: inline-flex; align-items: center; justify-content: center; z-index: 1;}
 .certificationBox .orederList::before{content: ''; position: absolute; top: 50%; transform: translateY(-50%); left:0; right:0; height: 1px; background-color: #ddd; z-index: -1;}
@@ -262,11 +263,17 @@ html, body{height: 100%;}
 .certificationBox .logoBox img{display: block; margin: 0 auto 10px}
 .certificationBox .logoBox span{display: block; color: #333; font-size: 20px; font-weight: 500; font-family: 'Recipekorea';}
 .certificationBox .infoTextBox{margin-bottom: 30px; height: calc(100vh - 568px); padding: 30px; background-color: #f9f9f9; border-radius: 15px; overflow-y: auto; box-shadow: 5px 5px 18px rgba(0, 0, 0, .1);}
-.certificationBox .infoTextBox .box{margin-bottom: 30px;}
+.certificationBox .infoTextBox .box{margin-bottom: 20px;}
 .certificationBox .infoTextBox .box:last-child{margin-bottom: 0;}
 .certificationBox .infoTextBox h4{margin-bottom: 5px; color: #333; }
 .certificationBox .infoTextBox .list li,
 .certificationBox .infoTextBox p{color: #333;}
+.certificationBox .infoTextBox h4{font-size: 20px;}
+.certificationBox .infoTextBox .list01 > li{position: relative; padding-left: 15px;}
+.certificationBox .infoTextBox .list01 > li::before{content: ''; position: absolute; top:12px; left: 0; width: 7px; height: 2px; background-color: #333;}
+.certificationBox .infoTextBox h5{font-size: 18px; color: #333; font-weight: 500;}
+.certificationBox .infoTextBox .list02{margin: 5px 0;}
+.certificationBox .infoTextBox .list02 > li{font-size: 16px;}
 .certificationBox .btn{width: 100%;}
 .certificationBox label{ padding-left: 33px; font-size: 18px;}
 .certificationBox .inputCheckBox label::before{top:-1px; width: 23px; height: 23px;}
