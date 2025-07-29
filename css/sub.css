@@ -8,10 +8,10 @@ html, body{height: 100%;}
 .mb-20{margin-bottom: 20px!important;}
 .mt-10{margin-top: 10px!important;}
 .text-center{text-align: center!important;}
-#sub{padding: 90px 0 0 90px; height: auto;}
+#sub{padding: 90px 0 0 90px; height: auto; min-height: 100vh;}
 .contentWrap{display: flex; align-items: center; justify-content: center; padding: 50px 20px; width: 100%; height: 100%;}
 .contentWrap .container{width: 100%;}
-.contentBox{position: relative; width: 70%; margin: 0 auto; padding: 50px; background-color: rgba(255,255,255, .9); border-radius: 15px; z-index: 1; overflow-x: hidden; overflow-y: auto;}
+.contentBox{/*max-height: calc(100vh - 193px);*/ position: relative; width: 70%; margin: 0 auto; padding: 50px; background-color: rgba(255,255,255, .9); border-radius: 15px; z-index: 1; overflow-x: hidden; overflow-y: auto;}
 
 @media (max-width: 1480px){
 
@@ -23,7 +23,7 @@ html, body{height: 100%;}
 
   #headerWrap{position: absolute;}
   .contentBox{ width: 100%; border-radius: 7px;}
-  #sub{padding: 58px 0 0;}
+  #sub{padding: 58px 0 0; height: auto;} 
 
 }
 
@@ -195,7 +195,7 @@ html, body{height: 100%;}
 .tab li .tabBtn{display: block; width: 100%; height: 34px; border-radius: 7px; background-color: #fff; color: #B5B5B5; font-weight: 500; font-size: 13px;}
 .tab li .tabBtn.active{background-color: #343434; color: #fff;}
 .viewListBox h4{padding-bottom: 5px; color: #000; font-weight: 700; border-bottom: 1px solid #000;}
-.viewListBox .viewList{overflow-y: auto; max-height: calc(100vh - 646px);}
+.viewListBox .viewList{overflow-y: auto;}
 .viewListBox .viewList > li{padding: 22px 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #000;}
 .viewListBox .viewList li .textBox h5{margin-bottom: 10px; color: #000; font-size: 18px; font-weight: 600;}
 .viewListBox .viewList li .textBox .list li{line-height: 1.3;}
@@ -203,31 +203,15 @@ html, body{height: 100%;}
 .viewListBox .viewList li .textBox .list li em{font-size: 14px; color: #333;}
 .viewListBox .viewList li .stateBox .state01{margin-bottom: 10px; display: block; font-size: 18px; font-weight: 600; color: #000;}
 .viewListBox .viewList li .stateBox .state02{display: block; width: 49px; height: 24px; line-height: 24px; border-radius: 5px; text-align: center; background-color: #FFF3F3; color: #AD6767; font-size: 12px; font-weight: 500;} 
-.tableBox{max-height: calc(100vh - 652px); overflow-y: auto;}
+.tableBox{overflow-y: auto;}
 .table{width: 100%;}
 .table thead tr th{padding: 12px 10px; height: 43px;  border-bottom: 1px solid #e4e4e4; font-size: 14px; color: #000; text-align: center; font-weight: 400;}
 .table tbody tr td{padding: 12px 10px; height: 43px; font-size: 14px; font-weight: 500; color: #000; text-align: center;}
 
-@media (max-width: 1199px){
 
-  .viewListBox .viewList{max-height: calc(100vh - 616px);}
-
-  .tableBox{max-height: calc(100vh - 626px);}
-
-}
-
-@media (max-width: 1024px){
-
-  .viewListBox .viewList{max-height: calc(100vh - 535px);}
-
-  .tableBox{max-height: calc(100vh - 523px);}
-
-}
 
 @media (max-width: 767px){
 
-   .tableBox{max-height: calc(100vh - 447px);}
-  .viewListBox .viewList{max-height: calc(100vh - 453px);}
   .viewListBox .viewList > li{padding: 22px 20px; flex-direction: column; gap: 40px 0; text-align: center;}
   .viewListBox .viewList li .stateBox .state02{margin: 0 auto;}
 
@@ -235,9 +219,7 @@ html, body{height: 100%;}
 
 @media (max-width: 480px){
 
-  .viewListBox .viewList{max-height: calc(100vh - 519px);}
-
-  .tableBox{max-height: calc(100vh - 517px); overflow-x: auto;}
+  .tableBox{ overflow-x: auto;}
   .tableBox .table{width: 480px;}
 
   .tab{width: 100%; flex-direction: column; gap: 7px 0; margin: 0 auto 32px;}
